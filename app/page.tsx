@@ -8,9 +8,7 @@ export default function Home() {
 				Empowering Success Through Innovative Solutions.
 				Unleash the potential of your team with our expert
 				Agile Coaching, transformative Change Management,
-				and cutting-edge Frontend / Fullstack Development
-				services. Experience the perfect blend of strategy
-				and technology to propel your business forward!
+				and Frontend / Fullstack Development services.
 			</p>
 			<button className="flex justify-center text-center border-2 border-pink-800 text-white py-2 px-4 mt-6 w-28 rounded-md hover:bg-transparent hover:text-white whitespace-nowrap hover:blur-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500">
 				let's chat
