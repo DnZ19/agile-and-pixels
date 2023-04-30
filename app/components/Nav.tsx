@@ -11,14 +11,14 @@ export default function Nav() {
 
 	return (
 		<nav className="flex flex-col sm:flex-row justify-between items-center py-8 px-6 w-full max-h-60 mt-[-130px] md:mt-[-90px] lg:max-h-20 lg:mt-[-20px] lg:py-14">
-			<div className="flex flex-col items-center justify-center w-full sm:flex-row sm:justify-between sm:items-center">
+			<div className="flex flex-col items-center justify-center w-full lg:flex-row sm:justify-between md:mt-2 lg:mt-5">
 				<div className="flex items-center gap-4 sm:flex-row justify-center sm:items-center">
 					<img
-						src="/logo.svg"
+						src="/logo2-color.svg"
 						alt="Logo"
-						className="object-contain max-w-md overflow-hidden md:ml-[-73px]"
+						className="object-contain max-w-md overflow-hidden md:ml-[-250px] lg:ml-[-50px] lg:max-w-2xl"
 					/>
-					<p className="hidden md:block md:text-sm mx-[-60px]">
+					<p className="hidden md:block md:text-xs mx-[-60px] font-extralight">
 						Agile / Frontend / Fullstack
 					</p>
 				</div>
@@ -75,7 +75,7 @@ export default function Nav() {
 					me
 				</li>
 				<li className="bg-transparent text-white py-2 px-4 cursor-pointer rounded-md ">
-					<button className="flex justify-center text-center border-2 border-pink-800 text-white py-2 px-4 rounded-md hover:bg-transparent hover:text-white whitespace-nowrap hover:blur-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500">
+					<button className="flex justify-center text-center border-2 border-mainColor text-mainColor py-2 px-4 rounded-md hover:bg-transparent hover:text-mainColor whitespace-nowrap hover:blur-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mainColor">
 						reach out
 					</button>
 				</li>
