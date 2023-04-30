@@ -17,7 +17,7 @@ export default async function RootLayout({
 
 	return (
 		<html lang="en">
-			<body className="max-w-custom mx-auto flex flex-col items-center min-h-screen">
+			<body className="bg-gray-900 max-w-custom mx-auto flex flex-col items-center min-h-screen">
 				<Nav />
 				{children}
 			</body>

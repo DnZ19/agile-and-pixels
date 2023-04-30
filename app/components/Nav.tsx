@@ -18,7 +18,9 @@ export default function Nav() {
 						alt="Logo"
 						className="object-contain max-w-md overflow-hidden md:ml-[-73px]"
 					/>
-					{/* / */}
+					<p className="hidden md:block md:text-sm mx-[-60px]">
+						Agile / Frontend / Fullstack
+					</p>
 				</div>
 			</div>
 			{/* Hamburger Menu */}
@@ -62,10 +64,13 @@ export default function Nav() {
 			<ul
 				className={`flex items-center gap-12 ${
 					isMenuOpen
-						? "bg-pink-600 w-full absolute left-0 top-0 h-48 flex flex-row justify-center py-8"
+						? "bg-pink-600 w-full absolute left-0 top-0 h-48 flex flex-row justify-center py-8 gap-2"
 						: "hidden"
 				} lg:flex lg:gap-0 lg:mt-4 lg:ml-auto`}>
 				{/* Navigation Links */}
+				<li className="flex justify-between items-center px-6">
+					resume
+				</li>
 				<li className="flex justify-between items-center px-6">
 					me
 				</li>
