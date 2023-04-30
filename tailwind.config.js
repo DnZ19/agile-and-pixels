@@ -16,6 +16,9 @@ module.exports = {
 			textColor: {
 				mainColor: "#f4cccc",
 			},
+			backgroundColor: {
+				mainBgColor: "#222222",
+			},
 		},
 	},
 	variants: {
