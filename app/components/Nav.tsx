@@ -12,11 +12,11 @@ export default function Nav() {
 	return (
 		<nav className="flex flex-col sm:flex-row justify-between items-center py-8 px-6 w-full max-h-60 mt-[-130px] md:mt-[-90px] lg:max-h-20 lg:mt-[-20px] lg:py-14">
 			<div className="flex flex-col items-center justify-center w-full sm:flex-row sm:justify-between sm:items-center">
-				<div className="flex items-center gap-4 sm:flex-row justify-center">
+				<div className="flex items-center gap-4 sm:flex-row justify-center sm:items-center">
 					<img
 						src="/logo.svg"
 						alt="Logo"
-						className="object-contain max-w-md px-6 overflow-hidden ml-[-10px] md:ml-[-90px]"
+						className="object-contain max-w-md overflow-hidden md:ml-[-73px]"
 					/>
 					{/* / */}
 				</div>
