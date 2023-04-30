@@ -13,7 +13,8 @@ export default function Home() {
 			<button className="flex justify-center text-center border-2 border-pink-800 text-white py-2 px-4 mt-6 w-28 rounded-md hover:bg-transparent hover:text-white whitespace-nowrap hover:blur-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500">
 				let's chat
 			</button>
-			<div className="flex flex-row items-center justify-center gap-6 w-full">
+
+			<div className="flex flex-col items-center justify-center gap-12 md:flex-row md:w-full">
 				<Services
 					image="/shutterstock_1391807393.jpg"
 					name="Agile Transition"

@@ -7,7 +7,7 @@ export default function Services({
 	description,
 }: ProductType) {
 	return (
-		<div className="w-80 mt-8">
+		<div className="w-72 mt-8 md:w-80">
 			<Image
 				src={image}
 				alt={name}
