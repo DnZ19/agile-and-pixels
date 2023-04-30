@@ -8,6 +8,8 @@ export default function Home() {
 	const [showServices, setShowServices] = useState(false);
 
 	useEffect(() => {
+		window.scrollTo(0, 0);
+
 		const handleScroll = () => {
 			if (window.scrollY > 50) {
 				setShowServices(true);
