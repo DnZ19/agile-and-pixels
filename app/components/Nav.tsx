@@ -64,7 +64,7 @@ export default function Nav() {
 			<ul
 				className={`flex items-center gap-12 ${
 					isMenuOpen
-						? "bg-pink-600 w-full absolute left-0 top-0 h-48 flex flex-row justify-center py-8 gap-2"
+						? "bg-secondaryColor w-full absolute left-0 top-0 h-48 flex flex-row justify-center py-8 gap-2"
 						: "hidden"
 				} lg:flex lg:gap-0 lg:mt-4 lg:ml-auto`}>
 				{/* Navigation Links */}
@@ -75,7 +75,7 @@ export default function Nav() {
 					me
 				</li>
 				<li className="bg-transparent text-white py-2 px-4 cursor-pointer rounded-md ">
-					<button className="flex justify-center text-center border-2 border-mainColor text-mainColor py-2 px-4 rounded-md hover:bg-transparent hover:text-mainColor whitespace-nowrap hover:blur-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mainColor">
+					<button className="flex justify-center text-center border-2 border-mainColor text-gray-800 md:text-mainColor py-2 px-4 rounded-md hover:bg-transparent hover:text-mainColor whitespace-nowrap hover:blur-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mainColor">
 						reach out
 					</button>
 				</li>

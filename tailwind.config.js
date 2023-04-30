@@ -18,6 +18,7 @@ module.exports = {
 			},
 			backgroundColor: {
 				mainBgColor: "#222222",
+				secondaryColor: "#f4cccc",
 			},
 		},
 	},
