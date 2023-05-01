@@ -7,15 +7,15 @@ export default function Services({
 	description,
 }: ProductType) {
 	return (
-		<div className="w-72 mt-8 md:w-auto md:px-8">
+		<div className="w-72 mt-8 sm:w-auto sm:px-8">
 			<Image
 				src={image}
 				alt={name}
 				width={400}
 				height={400}
-				className="rounded-md md:w-full"
+				className="rounded-md sm:w-full"
 			/>
-			<h1 className="font-custom-font-logo text-secondairyColor opacity-60 text-xl md:text-2xl py-8">
+			<h1 className="font-custom-font-logo text-secondairyColor opacity-60 text-xl sm:text-2xl py-8">
 				{name}
 			</h1>
 			<p className="text-secondairyColor text-justify">

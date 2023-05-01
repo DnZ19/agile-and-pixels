@@ -26,8 +26,8 @@ export default function Home() {
 	}, []);
 
 	return (
-		<main className="h-full flex flex-col items-center max-w-custom px-6 mt-20 md:mt-10 md:w-full lg:h-auto lg:mt-44">
-			<div className="h-96 px-8 flex flex-col items-center md:mt-8 lg:mt-10 lg:w-full">
+		<main className="h-full flex flex-col items-center max-w-custom px-6 mt-20 sm:mt-10 sm:w-full lg:h-auto lg:mt-44">
+			<div className="h-96 px-8 flex flex-col items-center sm:mt-8 lg:mt-10 lg:w-full">
 				<h1 className="text-center text-5xl font-light lg:text-8xl">
 					Tell me{" "}
 					<span className="italic font-bold text-pink-900">
@@ -55,7 +55,7 @@ export default function Home() {
 			</div>
 
 			<div
-				className={`transition-opacity duration-1000 ease-in-out py-2 px-4 pb-20 rounded-md flex flex-col items-center justify-center gap-12 md:w-full lg:border-2 lg:border-opacity-10 lg:border-secondairyColor mt-12 mb-60 ${
+				className={`transition-opacity duration-1000 ease-in-out py-2 px-4 pb-20 rounded-md flex flex-col items-center justify-center gap-12 sm:w-full lg:border-2 lg:border-opacity-10 lg:border-secondairyColor mt-12 mb-60 ${
 					showServices ? "opacity-100" : "opacity-0"
 				}`}>
 				<h1 className="w-full flex justify-center text-4xl text-mainColor font-light">
@@ -85,7 +85,7 @@ export default function Home() {
 						alt="waterlogo"
 						width={1000}
 						height={800}
-						className="rounded-md opacity-80"
+						className="rounded-md opacity-"
 					/>
 				</div>
 			</div>
