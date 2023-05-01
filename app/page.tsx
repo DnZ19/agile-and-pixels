@@ -26,7 +26,7 @@ export default function Home() {
 
 	return (
 		<main className="h-full flex flex-col items-center max-w-custom px-6 mt-20 md:mt-10 md:w-full min-h-screen">
-			<div className="h-96 px-8 flex flex-col items-center mt-11 lg:mt-40 lg:w-full">
+			<div className="h-96 px-8 flex flex-col items-center mt-11 md:mt-28 lg:mt-40 lg:w-full">
 				<h1 className="text-center text-5xl font-light lg:text-8xl">
 					Tell me{" "}
 					<span className="italic font-bold text-pink-900">

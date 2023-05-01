@@ -16,7 +16,7 @@ export default function Nav() {
 					<img
 						src="/logo-thin.svg"
 						alt="Logo"
-						className="object-contain max-w-md overflow-hidden md:max-w-xl md:mb-[-160px] md:mt-[-80px] lg:ml-[-190px] lg:mt-0 lg:max-w-1xl"
+						className="object-contain max-w-md overflow-hidden md:max-w-4xl md:mb-[-270px] md:mt-[-170px] lg:mb-[-160px] lg:ml-[-190px] lg:mt-0 lg:max-w-xl"
 					/>
 					<p className="hidden md:text-xs mx-[-60px] font-extralight lg:block lg:mt-40 lg:text-xs xl:text-lg">
 						Agile / Frontend / Fullstack
