@@ -31,7 +31,7 @@ export default async function RootLayout({
 				<title>{metadata.title}</title>
 				{/* Add other head tags like styles, scripts, etc. here */}
 			</Head>
-			<body className="bg-mainBgColor max-w-custom mx-auto flex flex-col items-center min-h-screen">
+			<body className="bg-mainBgColor flex flex-col items-center min-h-screen md:mt-32 lg:mt-0">
 				<Nav />
 				{children}
 			</body>

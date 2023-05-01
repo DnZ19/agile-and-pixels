@@ -11,12 +11,12 @@ export default function Nav() {
 
 	return (
 		<nav className="flex flex-col justify-between items-center py-8 px-6 w-full max-h-60 mt-[-130px] md:mt-[-90px] lg:flex-row lg:max-h-20 lg:mt-[-20px] lg:py-14 lg:ml-[-20px] lg:px-4 xl:ml-[-190px]">
-			<div className="flex flex-col items-center justify-center md:w-full lg:flex-row md:mt-2 lg:mt-5">
+			<div className="flex flex-col items-center justify-center w-full md:mt-2 lg:flex-row lg:mt-5">
 				<div className="flex flex-col items-center justify-center lg:flex-row lg:items-center lg:mt-[-80px]">
 					<img
 						src="/logo-thin.svg"
 						alt="Logo"
-						className="object-contain max-w-md overflow-hidden md:max-w-4xl md:mb-[-270px] md:mt-[-170px] lg:mb-[-160px] lg:ml-[-190px] lg:mt-0 lg:max-w-xl"
+						className="object-contain max-w-md overflow-hidden md:max-w-4xl md:min-w-full md:mb-[-270px] md:mt-[-170px] lg:mb-[-160px] lg:ml-[-190px] lg:mt-0 lg:max-w-xl"
 					/>
 					<p className="hidden md:text-xs mx-[-60px] font-extralight lg:block lg:mt-40 lg:text-xs xl:text-lg">
 						Agile / Frontend / Fullstack
