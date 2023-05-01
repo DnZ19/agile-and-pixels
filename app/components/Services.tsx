@@ -13,7 +13,7 @@ export default function Services({
 				alt={name}
 				width={400}
 				height={400}
-				className="rounded-md sm:w-full"
+				className="rounded-md w-full h-auto sm:h-60 md:h-64 lg:h-80"
 			/>
 			<h1 className="font-custom-font-logo text-secondairyColor opacity-60 text-xl sm:text-2xl py-8 lg:text-3xl">
 				{name}
