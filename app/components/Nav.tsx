@@ -10,23 +10,21 @@ export default function Nav() {
 	};
 
 	return (
-		<nav className="flex flex-col justify-between items-center py-8 px-6 w-full max-h-60 mt-[-130px] md:mt-[-90px] lg:flex-row lg:max-h-20 lg:mt-[-20px] lg:py-14 lg:ml-[-20px] lg:px-4 xl:ml-[-190px]">
-			<div className="flex flex-col items-center justify-center w-full md:mt-2 lg:flex-row lg:mt-5">
-				<div className="flex flex-col items-center justify-center lg:flex-row lg:items-center lg:mt-[-80px]">
-					<img
-						src="/logo-thin.svg"
-						alt="Logo"
-						className="object-contain max-w-md overflow-hidden md:max-w-4xl md:min-w-full md:mb-[-270px] md:mt-[-170px] lg:mb-[-160px] lg:ml-[-190px] lg:mt-0 lg:max-w-xl"
-					/>
-					<p className="hidden md:text-xs mx-[-60px] font-extralight lg:block lg:mt-40 lg:text-xs xl:text-lg">
-						Agile / Frontend / Fullstack
+		<nav className="flex flex-col justify-between items-center py-8 px-6 w-full lg:flex-row lg:justify-center">
+			<div className="flex flex-col items-center justify-center w-full">
+				<div className="flex flex-col items-center justify-center w-full lg:items-start lg:py-0 lg:mt-4">
+					<h1 className="font-custom-font-logo text-4xl font text-mainColor opacity-50 mt-6 md:text-6xl md:mb-8 lg:text-5xl lg:mb-0 lg:mt-0">
+						Agile & Pixels
+					</h1>
+					<p className="mt-1 text-xs text-mainColor font-light italic lg:mb-0 lg:mt-0lg:text-xs xl:text-lg">
+						Agile Coaching / Frontend / Fullstack
 					</p>
 				</div>
 			</div>
 			{/* Hamburger Menu */}
 			<div className="lg:hidden flex items-center justify-center">
 				<button
-					className={`top-0 right-0 text-white p-2 rounded-md focus:outline-none mt-[-200px] md:-mt-0 z-50`}
+					className={`top-0 right-0 text-mainColor p-2 rounded-md focus:outline-none mt-8 z-50`}
 					onClick={toggleMenu}>
 					<svg
 						className={`h-6 w-6 ${
@@ -62,20 +60,20 @@ export default function Nav() {
 			</div>
 			{/* Navigation Links */}
 			<ul
-				className={`flex items-center gap-2 text-sm lg:text-2xl lg:gap-1 ${
+				className={`flex items-center text-mainColor text-lg lg:text-2xl lg:gap-10 ${
 					isMenuOpen
 						? "bg-mainBgColor w-full absolute left-0 top-0 h-48 flex flex-row justify-center py-4 lg:py-8 gap-2"
 						: "hidden"
-				} lg:flex lg:gap-0 lg:mt-24 lg:ml-auto`}>
+				} lg:flex flex-row`}>
 				{/* Navigation Links */}
-				<li className="flex justify-between items-center px-6">
+				<li className="flex justify-between items-center px-6 lg:px-0">
 					resume
 				</li>
-				<li className="flex justify-between items-center px-6">
+				<li className="flex justify-between italic items-center px-6 lg:px-0">
 					me
 				</li>
-				<li className="bg-transparent text-white py-2 px-4 cursor-pointer rounded-md ">
-					<button className="flex justify-center text-center border-2 border-mainColor text-gray-800 md:text-mainColor py-2 px-4 rounded-md hover:bg-transparent hover:text-mainColor whitespace-nowrap hover:blur-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mainColor">
+				<li className="bg-transparent text-mainColor py-2 px-4 cursor-pointer rounded-md ">
+					<button className="flex justify-center text-center border-2 border-mainColor text-mainColor py-2 px-4 rounded-md hover:bg-transparent hover:text-mainColor whitespace-nowrap hover:blur-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mainColor">
 						reach out
 					</button>
 				</li>

@@ -28,6 +28,12 @@ module.exports = {
 				mainBgColor: "#f4cccc",
 				secondaryColor: "#222222",
 			},
+			fontFamily: {
+				"custom-font-logo": [
+					"CustomLogoFont",
+					"sans-serif",
+				],
+			},
 		},
 	},
 	variants: {

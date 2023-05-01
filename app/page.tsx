@@ -25,8 +25,8 @@ export default function Home() {
 	}, []);
 
 	return (
-		<main className="h-full flex flex-col items-center max-w-custom px-6 mt-20 md:mt-10 md:w-full min-h-screen">
-			<div className="h-96 px-8 flex flex-col items-center mt-11 md:mt-28 lg:mt-40 lg:w-full">
+		<main className="h-full flex flex-col items-center max-w-custom px-6 mt-20 md:mt-10 md:w-full lg:h-auto">
+			<div className="h-96 px-8 flex flex-col items-center md:mt-8 lg:mt-10 lg:w-full">
 				<h1 className="text-center text-5xl font-light lg:text-8xl">
 					Tell me{" "}
 					<span className="italic font-bold text-pink-900">
@@ -45,18 +45,19 @@ export default function Home() {
 					</span>
 					.
 				</p>
-				<button className="flex justify-center text-center border-2 border-mainColor text-mainColor py-2 px-4 mt-6 w-28 rounded-md hover:bg-transparent hover:text-white whitespace-nowrap hover:blur-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mainColor lg:w-48">
+				<button className="flex justify-center text-center border-2 border-mainColor text-mainColor py-2 px-4 mt-6 w-28 rounded-md hover:bg-transparent hover:text-white whitespace-nowrap hover:blur-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mainColor lg:w-48 lg:mb-2">
 					let's chat
 				</button>
-
-				<IoMdArrowDown className="mt-16 text-4xl text-pink-900" />
+				<div>
+					<IoMdArrowDown className="mt-16 text-4xl text-pink-900 lg:mt-20" />
+				</div>
 			</div>
 
 			<div
-				className={`transition-opacity duration-1000 ease-in-out py-2 px-4 pb-20 rounded-md flex flex-col items-center justify-center gap-12 md:w-full md:border-2 md:border-opacity-20 md:border-mainColor mt-12 mb-60 ${
+				className={`transition-opacity duration-1000 ease-in-out py-2 px-4 pb-20 rounded-md flex flex-col items-center justify-center gap-12 md:w-full lg:border-2 lg:border-opacity-90 lg:border-secondaryColor mt-12 mb-60 ${
 					showServices ? "opacity-100" : "opacity-0"
 				}`}>
-				<h1 className="w-full flex justify-center text-4xl text-teal-800 font-extralight">
+				<h1 className="w-full flex justify-center text-4xl text-mainColor font-light">
 					Services
 				</h1>
 
