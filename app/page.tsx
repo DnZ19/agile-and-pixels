@@ -26,15 +26,15 @@ export default function Home() {
 
 	return (
 		<main className="h-full flex flex-col items-center max-w-custom px-6 mt-20 md:mt-10 md:w-full min-h-screen">
-			<div className="h-96 w-full flex flex-col items-center mt-40">
-				<h1 className="text-center text-2xl font-light sm:text-5xl lg:text-8xl">
+			<div className="h-96 px-8 flex flex-col items-center mt-11 lg:mt-40 lg:w-full">
+				<h1 className="text-center text-5xl font-light lg:text-8xl">
 					Tell me{" "}
 					<span className="italic font-bold text-pink-900">
 						your
 					</span>{" "}
 					Agile Story
 				</h1>
-				<p className="text-lg font-extralight text-center font-style: italic sm:text-xl lg:text-2xl py-6">
+				<p className="text-xl font-extralight text-center font-style: italic lg:text-2xl py-6">
 					Together we will look for ways to let{" "}
 					<span className="not-italic font-semibold underline text-pink-900">
 						your organization
@@ -49,7 +49,7 @@ export default function Home() {
 					let's chat
 				</button>
 
-				<IoMdArrowDown className="mt-28 text-2xl text-pink-900" />
+				<IoMdArrowDown className="mt-16 text-4xl text-pink-900" />
 			</div>
 
 			<div
