@@ -13,10 +13,10 @@ export default function Nav() {
 		<nav className="flex flex-col justify-between items-center py-8 px-6 w-full lg:flex-row lg:justify-center lg:max-w-custom">
 			<div className="flex flex-col items-center justify-center w-full">
 				<div className="flex flex-col items-center justify-center w-full lg:items-start lg:py-0 lg:mt-4">
-					<h1 className="font-custom-font-logo text-4xl font text-mainColor opacity-50 mt-6 sm:text-6xl sm:mb-8 lg:text-5xl lg:mb-0 lg:mt-0">
+					<h1 className="font-custom-font-logo text-4xl sm:text-6xl sm:mb-8 md:text-8xl md:mb-10 text-mainColor opacity-50 mt-6 lg:text-5xl lg:mb-0 lg:mt-0">
 						Agile & Pixels
 					</h1>
-					<p className="mt-1 text-xs text-mainColor font-light italic lg:mb-0 lg:mt-0lg:text-xs xl:text-lg">
+					<p className="mt-1 text-xs md:text-lg text-mainColor font-light italic lg:mb-0 lg:mt-0lg:text-xs xl:text-lg">
 						Agile Coaching / Frontend / Fullstack
 					</p>
 				</div>
@@ -60,7 +60,7 @@ export default function Nav() {
 			</div>
 			{/* Navigation Links */}
 			<ul
-				className={`flex items-center text-mainColor text-lg lg:text-2xl lg:gap-10 ${
+				className={`flex items-center text-mainColor text-lg md:text-xl lg:text-2xl lg:gap-10 ${
 					isMenuOpen
 						? "bg-mainBgColor w-full absolute left-0 top-0 h-48 flex flex-row justify-center py-4 lg:py-8 gap-2"
 						: "hidden"

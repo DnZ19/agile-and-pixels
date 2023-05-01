@@ -27,15 +27,15 @@ export default function Home() {
 
 	return (
 		<main className="h-full flex flex-col items-center max-w-custom px-6 mt-20 sm:mt-10 sm:w-full lg:h-auto lg:mt-44">
-			<div className="h-96 px-8 flex flex-col items-center sm:mt-8 lg:mt-10 lg:w-full">
-				<h1 className="text-center text-5xl font-light lg:text-8xl">
+			<div className="h-96 px-8 flex flex-col items-center sm:mt-8 md:mb-20 lg:mt-10 lg:w-full">
+				<h1 className="text-center text-5xl md:text-8xl md:mb-4 font-light lg:text-8xl">
 					Tell me{" "}
 					<span className="italic font-bold text-pink-900">
 						your
 					</span>{" "}
 					Agile Story
 				</h1>
-				<p className="text-xl font-extralight text-center font-style: italic lg:text-2xl py-6">
+				<p className="text-xl md:text-4xl font-extralight text-center font-style: italic lg:text-2xl py-6">
 					Together we will look for ways to let{" "}
 					<span className="not-italic font-semibold underline text-pink-900">
 						your organization
