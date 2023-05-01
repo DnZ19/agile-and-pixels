@@ -15,10 +15,10 @@ export default function Services({
 				height={400}
 				className="rounded-md md:w-full"
 			/>
-			<h1 className="font-custom-font-logo text-secundairyColor opacity-80 text-xl md:text-2xl py-8">
+			<h1 className="font-custom-font-logo text-secondairyColor opacity-60 text-xl md:text-2xl py-8">
 				{name}
 			</h1>
-			<p className="text-secundairyColor text-justify">
+			<p className="text-secondairyColor text-justify">
 				{description}
 			</p>
 		</div>

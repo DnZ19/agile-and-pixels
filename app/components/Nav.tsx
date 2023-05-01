@@ -10,7 +10,7 @@ export default function Nav() {
 	};
 
 	return (
-		<nav className="flex flex-col justify-between items-center py-8 px-6 w-full lg:flex-row lg:justify-center">
+		<nav className="flex flex-col justify-between items-center py-8 px-6 w-full lg:flex-row lg:justify-center lg:max-w-custom">
 			<div className="flex flex-col items-center justify-center w-full">
 				<div className="flex flex-col items-center justify-center w-full lg:items-start lg:py-0 lg:mt-4">
 					<h1 className="font-custom-font-logo text-4xl font text-mainColor opacity-50 mt-6 md:text-6xl md:mb-8 lg:text-5xl lg:mb-0 lg:mt-0">
@@ -73,7 +73,7 @@ export default function Nav() {
 					me
 				</li>
 				<li className="bg-transparent text-mainColor py-2 px-4 cursor-pointer rounded-md ">
-					<button className="flex justify-center text-center border-2 border-mainColor text-mainColor py-2 px-4 rounded-md hover:bg-transparent hover:text-mainColor whitespace-nowrap hover:blur-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mainColor">
+					<button className="flex justify-center text-center border-2 border-secondairyColor border-opacity-60 text-mainColor py-2 px-4 rounded-md hover:bg-transparent hover:text-mainColor whitespace-nowrap hover:blur-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mainColor">
 						reach out
 					</button>
 				</li>

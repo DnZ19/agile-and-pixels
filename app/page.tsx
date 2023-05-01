@@ -3,6 +3,7 @@
 import Services from "./components/Services";
 import React, { useState, useEffect } from "react";
 import { IoMdArrowDown } from "react-icons/io";
+import Image from "next/image";
 
 export default function Home() {
 	const [showServices, setShowServices] = useState(false);
@@ -25,7 +26,7 @@ export default function Home() {
 	}, []);
 
 	return (
-		<main className="h-full flex flex-col items-center max-w-custom px-6 mt-20 md:mt-10 md:w-full lg:h-auto">
+		<main className="h-full flex flex-col items-center max-w-custom px-6 mt-20 md:mt-10 md:w-full lg:h-auto lg:mt-44">
 			<div className="h-96 px-8 flex flex-col items-center md:mt-8 lg:mt-10 lg:w-full">
 				<h1 className="text-center text-5xl font-light lg:text-8xl">
 					Tell me{" "}
@@ -45,7 +46,7 @@ export default function Home() {
 					</span>
 					.
 				</p>
-				<button className="flex justify-center text-center border-2 border-mainColor text-mainColor py-2 px-4 mt-6 w-28 rounded-md hover:bg-transparent hover:text-white whitespace-nowrap hover:blur-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mainColor lg:w-48 lg:mb-2">
+				<button className="flex justify-center text-center border-2 border-secondairyColor border-opacity-50 text-mainColor py-2 px-4 mt-6 w-28 rounded-md hover:bg-transparent hover:text-white whitespace-nowrap hover:blur-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mainColor lg:w-48 lg:mb-2">
 					let's chat
 				</button>
 				<div>
@@ -54,7 +55,7 @@ export default function Home() {
 			</div>
 
 			<div
-				className={`transition-opacity duration-1000 ease-in-out py-2 px-4 pb-20 rounded-md flex flex-col items-center justify-center gap-12 md:w-full lg:border-2 lg:border-opacity-90 lg:border-secondaryColor mt-12 mb-60 ${
+				className={`transition-opacity duration-1000 ease-in-out py-2 px-4 pb-20 rounded-md flex flex-col items-center justify-center gap-12 md:w-full lg:border-2 lg:border-opacity-10 lg:border-secondairyColor mt-12 mb-60 ${
 					showServices ? "opacity-100" : "opacity-0"
 				}`}>
 				<h1 className="w-full flex justify-center text-4xl text-mainColor font-light">
@@ -76,6 +77,15 @@ export default function Home() {
 						image="/shutterstock_1801873138.jpg"
 						name="Coaching & Facilitating teams"
 						description="Our Agile Coach service empowers teams to reach their full potential in an agile environment. We offer tailored coaching and mentorship, guiding organizations through agile transformations, optimizing processes, fostering a culture of continuous improvement, and developing agile leadership skills. With our expertise, your team can enhance collaboration, adaptability, and project delivery, driving sustainable agile success."
+					/>
+				</div>
+				<div className="bg-cover w-auto mx-8 rounded-md mt-10">
+					<Image
+						src="/boat.png"
+						alt="waterlogo"
+						width={1000}
+						height={800}
+						className="rounded-md opacity-80"
 					/>
 				</div>
 			</div>

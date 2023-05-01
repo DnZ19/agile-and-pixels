@@ -1,6 +1,7 @@
 import Head from "next/head";
 import "./globals.css";
 import Nav from "./components/Nav";
+import Bottom from "./components/Bottom";
 import { getServerSession } from "next-auth";
 
 // import { authOptions } from '@/pages/api/auth/[...nextauth]'
@@ -34,6 +35,7 @@ export default async function RootLayout({
 			<body className="bg-mainBgColor flex flex-col items-center min-h-screen">
 				<Nav />
 				{children}
+				<Bottom />
 			</body>
 		</html>
 	);

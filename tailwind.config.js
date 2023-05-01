@@ -20,13 +20,21 @@ module.exports = {
 			maxWidth: {
 				custom: "1400px",
 			},
+			colors: {
+				tertiaryColor: "#debaba",
+			},
 			textColor: {
 				mainColor: "#222222",
-				secundairyColor: "#F7F7F7",
+				secondairyColor: "#F7F7F7",
 			},
 			backgroundColor: {
 				mainBgColor: "#f4cccc",
 				secondaryColor: "#222222",
+				tertiaryColor: "#debaba",
+			},
+			borderColor: {
+				mainColor: "#222222",
+				secondairyColor: "#F7F7F7",
 			},
 			fontFamily: {
 				"custom-font-logo": [
