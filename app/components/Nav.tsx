@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Nav() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,9 +14,11 @@ export default function Nav() {
 		<nav className="flex flex-col justify-between items-center py-8 px-6 w-full lg:flex-row lg:justify-center lg:max-w-custom">
 			<div className="flex flex-col items-center justify-center w-full">
 				<div className="flex flex-col items-center justify-center w-full lg:items-start lg:py-0 lg:mt-4">
-					<h1 className="font-custom-font-logo text-4xl sm:text-6xl sm:mb-8 md:text-8xl md:mb-10 text-mainColor opacity-50 mt-6 lg:text-5xl lg:mb-0 lg:mt-0">
-						Agile & Pixels
-					</h1>
+					<Link href="/" className="cursor-pointer">
+						<h1 className="font-custom-font-logo text-4xl sm:text-6xl sm:mb-8 md:text-8xl md:mb-10 text-mainColor opacity-50 mt-6 lg:text-5xl lg:mb-0 lg:mt-0">
+							Agile & Pixels
+						</h1>
+					</Link>
 					<p className="mt-1 text-xs md:text-lg text-mainColor font-light italic lg:mb-0 lg:mt-2 lg:text-xs xl:text-lg">
 						Agile Coaching / Frontend / Fullstack
 					</p>
@@ -66,17 +69,23 @@ export default function Nav() {
 						: "hidden"
 				} lg:flex flex-row`}>
 				{/* Navigation Links */}
-				<li className="flex justify-between items-center px-6 lg:px-0">
-					resume
-				</li>
-				<li className="flex justify-between italic items-center px-6 lg:px-0">
-					me
-				</li>
-				<li className="bg-transparent text-mainColor py-2 px-4 cursor-pointer rounded-md">
-					<button className="flex justify-center text-center border-2 border-secondairyColor border-opacity-60 text-mainColor py-2 px-4 rounded-md hover:bg-transparent hover:text-mainColor whitespace-nowrap hover:blur-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mainColor">
-						reach out
-					</button>
-				</li>
+				<Link href="/resume" className="cursor-pointer">
+					<li className="flex justify-between items-center px-6 lg:px-0">
+						resume
+					</li>
+				</Link>
+				<Link href="/me" className="cursor-pointer">
+					<li className="flex justify-between italic items-center px-6 lg:px-0">
+						me
+					</li>
+				</Link>
+				<Link href="/contact" className="cursor-pointer">
+					<li className="bg-transparent text-mainColor py-2 px-4 cursor-pointer rounded-md">
+						<button className="flex justify-center text-center border-2 border-secondairyColor border-opacity-60 text-mainColor py-2 px-4 rounded-md hover:bg-transparent hover:text-mainColor whitespace-nowrap hover:blur-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mainColor">
+							reach out
+						</button>
+					</li>
+				</Link>
 			</ul>
 		</nav>
 	);
