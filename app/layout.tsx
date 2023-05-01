@@ -1,3 +1,4 @@
+import Head from "next/head";
 import "./globals.css";
 import Nav from "./components/Nav";
 import { getServerSession } from "next-auth";
@@ -18,6 +19,18 @@ export default async function RootLayout({
 
 	return (
 		<html lang="en">
+			<Head>
+				<meta
+					name="viewport"
+					content="width=device-width, initial-scale=1.0"
+				/>
+				<meta
+					name="description"
+					content={metadata.description}
+				/>
+				<title>{metadata.title}</title>
+				{/* Add other head tags like styles, scripts, etc. here */}
+			</Head>
 			<body className="bg-mainBgColor max-w-custom mx-auto flex flex-col items-center min-h-screen">
 				<Nav />
 				{children}
