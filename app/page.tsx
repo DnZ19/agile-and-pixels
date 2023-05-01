@@ -60,7 +60,7 @@ export default function Home() {
 					Services
 				</h1>
 
-				<div className="flex flex-col items-center justify-center gap-12 md:flex-row md:w-full">
+				<div className="flex flex-col items-center justify-center gap-12 lg:flex-row lg:w-full">
 					<Services
 						image="/shutterstock_1391807393.jpg"
 						name="Agile Transition"

@@ -10,15 +10,15 @@ export default function Nav() {
 	};
 
 	return (
-		<nav className="flex flex-col sm:flex-row justify-between items-center py-8 px-6 w-full max-h-60 mt-[-130px] md:mt-[-90px] lg:max-h-20 lg:mt-[-20px] lg:py-14">
-			<div className="flex flex-col items-center justify-center w-full lg:flex-row sm:justify-between md:mt-2 lg:mt-5">
-				<div className="flex items-center gap-4 sm:flex-row justify-center sm:items-center">
+		<nav className="flex flex-col lg:flex-row justify-between items-center py-8 px-6 w-full max-h-60 mt-[-130px] md:mt-[-90px] lg:max-h-20 lg:mt-[-20px] lg:py-14">
+			<div className="flex flex-col items-center justify-center md:w-full lg:flex-row sm:justify-between md:mt-2 lg:mt-5">
+				<div className="flex flex-col items-center justify-center gap-2 lg:gap-4 lg:flex-row lg:items-center lg:mt-[-80px]">
 					<img
 						src="/logo-thin.svg"
 						alt="Logo"
-						className="object-contain max-w-md overflow-hidden md:ml-[-250px] lg:ml-[-50px] lg:max-w-2xl"
+						className="object-contain max-w-md md:max-w-xl overflow-hidden md:mb-[-150px] lg:ml-[-110px] lg:max-w-2xl"
 					/>
-					<p className="hidden md:block md:text-xs mx-[-60px] font-extralight">
+					<p className="hidden md:block md:text-xs mx-[-60px] font-extralight lg:mt-36 lg:text-sm">
 						Agile / Frontend / Fullstack
 					</p>
 				</div>
@@ -66,7 +66,7 @@ export default function Nav() {
 					isMenuOpen
 						? "bg-mainBgColor w-full absolute left-0 top-0 h-48 flex flex-row justify-center py-8 gap-2"
 						: "hidden"
-				} lg:flex lg:gap-0 lg:mt-4 lg:ml-auto`}>
+				} lg:flex lg:gap-0 lg:mt-20 lg:ml-auto`}>
 				{/* Navigation Links */}
 				<li className="flex justify-between items-center px-6">
 					resume
