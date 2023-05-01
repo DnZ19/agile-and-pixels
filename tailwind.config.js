@@ -14,11 +14,12 @@ module.exports = {
 				custom: "1400px",
 			},
 			textColor: {
-				mainColor: "#f4cccc",
+				mainColor: "#222222",
+				secundairyColor: "#F7F7F7",
 			},
 			backgroundColor: {
-				mainBgColor: "#222222",
-				secondaryColor: "#f4cccc",
+				mainBgColor: "#f4cccc",
+				secondaryColor: "#222222",
 			},
 		},
 	},

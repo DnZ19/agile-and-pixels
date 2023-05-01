@@ -14,7 +14,7 @@ export default function Nav() {
 			<div className="flex flex-col items-center justify-center w-full lg:flex-row sm:justify-between md:mt-2 lg:mt-5">
 				<div className="flex items-center gap-4 sm:flex-row justify-center sm:items-center">
 					<img
-						src="/logo2-color.svg"
+						src="/logo-thin.svg"
 						alt="Logo"
 						className="object-contain max-w-md overflow-hidden md:ml-[-250px] lg:ml-[-50px] lg:max-w-2xl"
 					/>
@@ -62,9 +62,9 @@ export default function Nav() {
 			</div>
 			{/* Navigation Links */}
 			<ul
-				className={`flex items-center gap-12 ${
+				className={`flex items-center gap-12 text-2xl ${
 					isMenuOpen
-						? "bg-secondaryColor w-full absolute left-0 top-0 h-48 flex flex-row justify-center py-8 gap-2"
+						? "bg-mainBgColor w-full absolute left-0 top-0 h-48 flex flex-row justify-center py-8 gap-2"
 						: "hidden"
 				} lg:flex lg:gap-0 lg:mt-4 lg:ml-auto`}>
 				{/* Navigation Links */}

@@ -29,18 +29,18 @@ export default function Home() {
 			<div className="h-96 w-full flex flex-col items-center mt-40">
 				<h1 className="text-center text-2xl font-light sm:text-5xl lg:text-8xl">
 					Tell me{" "}
-					<span className="italic font-bold text-mainColor">
+					<span className="italic font-bold text-pink-900">
 						your
 					</span>{" "}
 					Agile Story
 				</h1>
 				<p className="text-lg font-extralight text-center font-style: italic sm:text-xl lg:text-2xl py-6">
 					Together we will look for ways to let{" "}
-					<span className="not-italic font-semibold underline text-mainColor">
+					<span className="not-italic font-semibold underline text-pink-900">
 						your organization
 					</span>{" "}
 					grow more{" "}
-					<span className="font-medium text-mainColor">
+					<span className="font-medium text-pink-900">
 						Agile
 					</span>
 					.
@@ -49,7 +49,7 @@ export default function Home() {
 					let's chat
 				</button>
 
-				<IoMdArrowDown className="mt-28 text-2xl text-mainColor" />
+				<IoMdArrowDown className="mt-28 text-2xl text-pink-900" />
 			</div>
 
 			<div
