@@ -16,7 +16,7 @@ export default function Nav() {
 					<h1 className="font-custom-font-logo text-4xl sm:text-6xl sm:mb-8 md:text-8xl md:mb-10 text-mainColor opacity-50 mt-6 lg:text-5xl lg:mb-0 lg:mt-0">
 						Agile & Pixels
 					</h1>
-					<p className="mt-1 text-xs md:text-lg text-mainColor font-light italic lg:mb-0 lg:mt-0lg:text-xs xl:text-lg">
+					<p className="mt-1 text-xs md:text-lg text-mainColor font-light italic lg:mb-0 lg:mt-2 lg:text-xs xl:text-lg">
 						Agile Coaching / Frontend / Fullstack
 					</p>
 				</div>
@@ -27,7 +27,7 @@ export default function Nav() {
 					className={`top-0 right-0 text-mainColor p-2 rounded-md focus:outline-none mt-8 z-50`}
 					onClick={toggleMenu}>
 					<svg
-						className={`h-6 w-6 ${
+						className={`h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10 ${
 							isMenuOpen ? "hidden" : "block"
 						}`}
 						fill="none"
@@ -41,7 +41,7 @@ export default function Nav() {
 						/>
 					</svg>
 					<svg
-						className={`h-6 w-6  ${
+						className={`h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10 ${
 							isMenuOpen
 								? "block top-0 right-0 absolute my-4 mx-4"
 								: "hidden"
@@ -72,7 +72,7 @@ export default function Nav() {
 				<li className="flex justify-between italic items-center px-6 lg:px-0">
 					me
 				</li>
-				<li className="bg-transparent text-mainColor py-2 px-4 cursor-pointer rounded-md ">
+				<li className="bg-transparent text-mainColor py-2 px-4 cursor-pointer rounded-md">
 					<button className="flex justify-center text-center border-2 border-secondairyColor border-opacity-60 text-mainColor py-2 px-4 rounded-md hover:bg-transparent hover:text-mainColor whitespace-nowrap hover:blur-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mainColor">
 						reach out
 					</button>

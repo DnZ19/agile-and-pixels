@@ -35,7 +35,7 @@ export default function Home() {
 					</span>{" "}
 					Agile Story
 				</h1>
-				<p className="text-xl md:text-4xl font-extralight text-center font-style: italic lg:text-2xl py-6">
+				<p className="text-xl md:text-4xl font-extralight text-center italic lg:text-2xl py-6">
 					Together we will look for ways to let{" "}
 					<span className="not-italic font-semibold underline text-pink-900">
 						your organization
@@ -62,7 +62,7 @@ export default function Home() {
 					Services
 				</h1>
 
-				<div className="flex flex-col items-center justify-center gap-12 lg:flex-row lg:w-full">
+				<div className="flex flex-col items-center justify-center gap-12 lg:flex-row lg:items-start lg:w-full">
 					<Services
 						image="/shutterstock_1391807393.jpg"
 						name="Agile Transition"
