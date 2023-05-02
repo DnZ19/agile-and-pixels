@@ -68,7 +68,7 @@ export default function Home() {
 
 				<div className="flex flex-col w-auto items-center justify-center gap-4 h-auto lg:flex-row lg:min-h-[300px] lg:items-start">
 					<Link
-						href="/agile-transition"
+						href="/agile_transition_service"
 						className="cursor-pointer">
 						<Services
 							image="/shutterstock_1391807393.jpg"
@@ -77,7 +77,7 @@ export default function Home() {
 						/>
 					</Link>
 					<Link
-						href="/webshop-developement"
+						href="/web_app_development_service"
 						className="cursor-pointer">
 						<Services
 							image="/shutterstock_1918258610.jpg"
@@ -86,7 +86,7 @@ export default function Home() {
 						/>
 					</Link>
 					<Link
-						href="/coaching-and-facilitating-teams"
+						href="/coaching_facilitating_service"
 						className="cursor-pointer">
 						<Services
 							image="/shutterstock_1801873138.jpg"
