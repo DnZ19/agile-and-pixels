@@ -59,14 +59,14 @@ export default function Home() {
 			</div>
 
 			<div
-				className={`transition-opacity duration-1000 ease-in-out py-2 px-4 pb-20 rounded-md flex flex-col items-center justify-center gap-12 sm:w-full lg:border-2 lg:border-opacity-10 lg:border-secondairyColor mt-12 mb-60 ${
+				className={`transition-opacity duration-1000 ease-in-out py-2 px-4 pb-20 rounded-md flex flex-col items-center justify-center gap-12 sm:w-full lg:border-2 lg:border-opacity-10 lg:border-secondairyColor mt-12 mb-4 ${
 					showServices ? "opacity-100" : "opacity-0"
 				}`}>
 				<h1 className="w-full flex justify-center text-4xl text-mainColor font-light">
 					Services
 				</h1>
 
-				<div className="flex flex-col items-center justify-center gap-12 lg:flex-row lg:items-start lg:w-full">
+				<div className="flex flex-col w-auto items-center justify-center gap-4 h-auto lg:flex-row lg:min-h-[300px] lg:items-start">
 					<Link
 						href="/agile-transition"
 						className="cursor-pointer">
@@ -95,13 +95,13 @@ export default function Home() {
 						/>
 					</Link>
 				</div>
-				<div className="bg-cover w-auto mx-8 rounded-md mt-10">
+				<div className="bg-cover w-auto mx-8 rounded-md mt-10 md:w-full">
 					<Image
 						src="/boat.png"
 						alt="waterlogo"
 						width={1000}
 						height={800}
-						className="rounded-md opacity-"
+						className="rounded-md w-full"
 					/>
 				</div>
 			</div>
