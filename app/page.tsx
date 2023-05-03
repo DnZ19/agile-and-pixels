@@ -29,29 +29,35 @@ export default function Home() {
 	return (
 		<main className="h-full flex flex-col items-center max-w-custom px-6 mt-20 sm:mt-10 sm:w-full lg:h-auto lg:mt-44">
 			<div className="h-96 px-8 flex flex-col items-center sm:mt-8 md:mb-20 lg:mt-10 lg:w-full">
-				<h1 className="text-center text-5xl md:text-8xl md:mb-4 font-light lg:text-8xl">
-					Tell me{" "}
-					<span className="italic font-bold text-pink-900">
-						your
-					</span>{" "}
-					Agile Story
-				</h1>
-				<p className="text-xl md:text-4xl font-extralight text-center italic lg:text-2xl py-6">
-					Together we will look for ways to let{" "}
-					<span className="not-italic font-semibold underline text-pink-900">
-						your organization
-					</span>{" "}
-					grow more{" "}
-					<span className="font-medium text-pink-900">
-						Agile
-					</span>
-					.
-				</p>
-				<Link href="/contact" className="cursor-pointer">
-					<button className="flex justify-center text-center border-2 border-secondairyColor border-opacity-50 text-mainColor py-2 px-4 mt-6 w-28 rounded-md hover:bg-transparent hover:text-white whitespace-nowrap hover:blur-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mainColor lg:w-48 lg:mb-2">
-						let's chat
-					</button>
-				</Link>
+				<div className="motion-safe:delay-500 motion-safe:animate-fadeIn">
+					<h1 className="text-center text-5xl md:text-8xl md:mb-4 font-light lg:text-8xl">
+						Tell me{" "}
+						<span className="italic font-bold text-pink-900">
+							your
+						</span>{" "}
+						Agile Story
+					</h1>
+				</div>
+				<div className="motion-safe:delay-1000 motion-safe:animate-fadeIn">
+					<p className="text-xl md:text-4xl font-extralight text-center italic lg:text-2xl py-6">
+						Together we will look for ways to let{" "}
+						<span className="not-italic font-semibold underline text-pink-900">
+							your organization
+						</span>{" "}
+						grow more{" "}
+						<span className="font-medium text-pink-900">
+							Agile
+						</span>
+						.
+					</p>
+				</div>
+				<div className="motion-safe:delay-1500 motion-safe:animate-fadeIn">
+					<Link href="/contact" className="cursor-pointer">
+						<button className="flex justify-center text-center border-2 border-secondairyColor border-opacity-50 text-mainColor py-2 px-4 mt-6 w-28 rounded-md hover:bg-transparent hover:text-white whitespace-nowrap hover:blur-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mainColor lg:w-48 lg:mb-2">
+							let's chat
+						</button>
+					</Link>
+				</div>
 
 				<div>
 					<IoMdArrowDown className="mt-16 text-4xl text-pink-900 lg:mt-20" />

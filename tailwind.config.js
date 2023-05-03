@@ -42,11 +42,27 @@ module.exports = {
 					"sans-serif",
 				],
 			},
+			animation: {
+				fadeIn: "fadeIn 1s ease-in-out forwards",
+			},
+			keyframes: {
+				fadeIn: {
+					"0%": { opacity: "0" },
+					"100%": { opacity: "1" },
+				},
+			},
+			delay: {
+				500: "500ms",
+				1000: "1000ms",
+				1500: "1500ms",
+			},
 		},
 	},
 	variants: {
 		extend: {
 			blur: ["hover"],
+			animation: ["motion-safe"],
+			delay: ["motion-safe"],
 		},
 	},
 	plugins: [],
