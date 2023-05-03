@@ -66,7 +66,7 @@ export default function Home() {
 					Services
 				</h1>
 
-				<div className="flex flex-col w-auto items-center justify-center gap-4 h-auto lg:flex-row lg:min-h-[300px] lg:items-start">
+				<div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center justify-center h-auto lg:min-h-[300px] lg:items-start">
 					<Link
 						href="/agile_transition_service"
 						className="cursor-pointer">
@@ -94,16 +94,26 @@ export default function Home() {
 							description="Our Agile Coach service empowers teams to reach their full potential in an agile environment. We offer tailored coaching and mentorship, guiding organizations through agile transformations, optimizing processes, fostering a culture of continuous improvement, and developing agile leadership skills. With our expertise, your team can enhance collaboration, adaptability, and project delivery, driving sustainable agile success."
 						/>
 					</Link>
+					<Link
+						href="/son_of_pollos"
+						className="cursor-pointer">
+						<Services
+							image="/pink_pollos_logo.png"
+							name="full son of pink pollos"
+							description="We mentor young professional frontend developers in professional and agile skills."
+						/>
+					</Link>
 				</div>
-				<div className="bg-cover w-auto mx-8 rounded-md mt-10 md:w-full">
+
+				{/* <div className="bg-cover w-auto mx-8 rounded-md mt-10 md:w-full md:p-4">
 					<Image
-						src="/boat.png"
+						src="/pink_pollos_logo.png"
 						alt="waterlogo"
 						width={1000}
 						height={800}
 						className="rounded-md w-full"
 					/>
-				</div>
+				</div> */}
 			</div>
 		</main>
 	);

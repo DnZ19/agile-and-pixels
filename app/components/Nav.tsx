@@ -10,6 +10,10 @@ export default function Nav() {
 		setIsMenuOpen(!isMenuOpen);
 	};
 
+	const closeMenu = () => {
+		setIsMenuOpen(false);
+	};
+
 	return (
 		<nav className="flex flex-col justify-between items-center py-8 px-6 w-full lg:flex-row lg:justify-center lg:max-w-custom">
 			<div className="flex flex-col items-center justify-center w-full">
@@ -69,17 +73,26 @@ export default function Nav() {
 						: "hidden"
 				} lg:flex flex-row`}>
 				{/* Navigation Links */}
-				<Link href="/resume" className="cursor-pointer">
+				<Link
+					href="/resume"
+					className="cursor-pointer"
+					onClick={closeMenu}>
 					<li className="flex justify-between items-center px-6 lg:px-0">
 						resume
 					</li>
 				</Link>
-				<Link href="/me" className="cursor-pointer">
+				<Link
+					href="/me"
+					className="cursor-pointer"
+					onClick={closeMenu}>
 					<li className="flex justify-between italic items-center px-6 lg:px-0">
 						me
 					</li>
 				</Link>
-				<Link href="/contact" className="cursor-pointer">
+				<Link
+					href="/contact"
+					className="cursor-pointer"
+					onClick={closeMenu}>
 					<li className="bg-transparent text-mainColor py-2 px-4 cursor-pointer rounded-md">
 						<button className="flex justify-center text-center border-2 border-secondairyColor border-opacity-60 text-mainColor py-2 px-4 rounded-md hover:bg-transparent hover:text-mainColor whitespace-nowrap hover:blur-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mainColor">
 							reach out

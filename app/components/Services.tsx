@@ -13,7 +13,8 @@ export default function Services({
 				alt={name}
 				width={1400}
 				height={1400}
-				className="rounded-md lg:min-h-[230px] xl:min-h-[300px]"
+				className="rounded-md md:min-h-[200px] lg:min-h-[320px] xl:min-h-[450px]"
+				sizes="(min-width: 768px) 300px, (min-width: 1024px) 230px, (min-width: 1280px) 300px, 100vw"
 			/>
 			<h1 className="font-custom-font-logo text-secondairyColor opacity-60 text-xl sm:text-2xl py-8 lg:text-3xl">
 				{name}
