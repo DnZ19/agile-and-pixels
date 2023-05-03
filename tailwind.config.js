@@ -43,7 +43,7 @@ module.exports = {
 				],
 			},
 			animation: {
-				fadeIn: "fadeIn 1s ease-in-out forwards",
+				fadeIn: "fadeIn 3s ease-in-out forwards",
 			},
 			keyframes: {
 				fadeIn: {
@@ -52,9 +52,9 @@ module.exports = {
 				},
 			},
 			delay: {
-				500: "500ms",
-				1000: "2000ms",
-				1500: "3500ms",
+				500: "2s",
+				1000: "6s",
+				1500: "8s",
 			},
 		},
 	},
