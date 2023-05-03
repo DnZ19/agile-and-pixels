@@ -15,7 +15,7 @@ export default function Nav() {
 	};
 
 	return (
-		<nav className="flex flex-col justify-between items-center py-8 px-6 w-full lg:flex-row lg:justify-center lg:max-w-custom">
+		<nav className="motion-safe:delay-1500 motion-safe:animate-fadeInThree flex flex-col justify-between items-center py-8 px-6 w-full lg:flex-row lg:justify-center lg:max-w-custom">
 			<div className="flex flex-col items-center justify-center w-full">
 				<div className="flex flex-col items-center justify-center w-full lg:items-start lg:py-0 lg:mt-4">
 					<Link href="/" className="cursor-pointer">
@@ -28,6 +28,7 @@ export default function Nav() {
 					</p>
 				</div>
 			</div>
+
 			{/* Hamburger Menu */}
 			<div className="lg:hidden flex items-center justify-center">
 				<button

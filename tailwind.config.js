@@ -43,7 +43,9 @@ module.exports = {
 				],
 			},
 			animation: {
-				fadeIn: "fadeIn 3s ease-in-out forwards",
+				fadeInOne: "fadeIn 3s ease-in-out forwards",
+				fadeInTwo: "fadeIn 15s ease-in-out forwards",
+				fadeInThree: "fadeIn 20s ease-in-out forwards",
 			},
 			keyframes: {
 				fadeIn: {
@@ -54,7 +56,7 @@ module.exports = {
 			delay: {
 				500: "2s",
 				1000: "6s",
-				1500: "8s",
+				1500: "10s",
 			},
 		},
 	},

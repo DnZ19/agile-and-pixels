@@ -1,55 +1,58 @@
-import { useState } from "react";
+import React from "react";
+import { useForm, ValidationError } from "@formspree/react";
 
 export default function ReachtOut() {
-	const handleSubmit = async (e) => {
-		e.preventDefault();
-
-		// Extract form data
-		const formData = new FormData(e.target);
-		const data = Object.fromEntries(formData.entries());
-
-		// Send data to API endpoint
-		try {
-			const response = await fetch("/api/send-email", {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
-				},
-				body: JSON.stringify(data),
-			});
-
-			if (!response.ok) {
-				throw new Error("Failed to send email");
-			}
-
-			// Handle success
-			alert("Email sent successfully");
-		} catch (error) {
-			// Handle error
-			alert("Error sending email: " + error.message);
-		}
-	};
-
+	const [state, handleSubmit] = useForm("xnqywveb");
+	if (state.succeeded) {
+		return (
+			<p>
+				Thanks reaching out, I will be in contact shortly!
+			</p>
+		);
+	}
 	return (
-		<form onSubmit={handleSubmit}>
-			<label htmlFor="name">Name</label>
-			<input type="text" id="name" name="name" required />
-
-			<label htmlFor="email">Email</label>
+		<form
+			onSubmit={handleSubmit}
+			className="w-full max-w-md mx-auto space-y-3 p-8">
+			<label
+				htmlFor="email"
+				className="block text-sm font-medium text-pink-950">
+				Email Address
+			</label>
 			<input
-				type="email"
 				id="email"
+				type="email"
 				name="email"
-				required
+				className="w-full px-3 py-2 placeholder-pink-900 text-pink-900 bg-transparent border-2 rounded-md focus:outline-none focus:ring-pink-500 focus:border-pink-500 sm:text-sm"
 			/>
-
-			<label htmlFor="message">Message</label>
+			<ValidationError
+				prefix="Email"
+				field="email"
+				errors={state.errors}
+				className="text-red-600 text-sm"
+			/>
+			<label
+				htmlFor="message"
+				className="block text-sm font-medium text-pink-950">
+				Leave me a message
+			</label>
 			<textarea
 				id="message"
 				name="message"
-				required></textarea>
-
-			<button type="submit">Send Email</button>
+				className="w-full px-3 py-2 placeholder-pink-900 text-pink-900 bg-transparent border-2 rounded-md focus:outline-none focus:ring-pink-500 focus:border-pink-500 sm:text-sm"
+			/>
+			<ValidationError
+				prefix="Message"
+				field="message"
+				errors={state.errors}
+				className="text-red-600 text-sm"
+			/>
+			<button
+				type="submit"
+				disabled={state.submitting}
+				className="w-full px-4 py-2 text-sm font-medium text-white bg-pink-800 rounded-md hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+				Submit
+			</button>
 		</form>
 	);
 }
