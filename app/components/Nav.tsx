@@ -74,14 +74,16 @@ export default function Nav() {
 						: "hidden"
 				} lg:flex flex-row`}>
 				{/* Navigation Links */}
-				<Link
-					href="/resume"
+				<a
+					href="https://www.linkedin.com/in/dennisrijkers/"
+					target="_blank"
+					rel="noopener noreferrer"
 					className="cursor-pointer"
 					onClick={closeMenu}>
 					<li className="flex justify-between items-center px-6 lg:px-0">
 						resume
 					</li>
-				</Link>
+				</a>
 				<Link
 					href="/me"
 					className="cursor-pointer"
