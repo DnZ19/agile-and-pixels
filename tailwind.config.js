@@ -44,8 +44,8 @@ module.exports = {
 			},
 			animation: {
 				fadeInOne: "fadeIn 3s ease-in-out forwards",
-				fadeInTwo: "fadeIn 15s ease-in-out forwards",
-				fadeInThree: "fadeIn 20s ease-in-out forwards",
+				fadeInTwo: "fadeIn 10s ease-in-out forwards",
+				fadeInThree: "fadeIn 10s ease-in-out forwards",
 			},
 			keyframes: {
 				fadeIn: {

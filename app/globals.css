@@ -29,7 +29,7 @@
 
 	--tile-start-rgb: 239, 245, 249;
 	--tile-end-rgb: 228, 232, 233;
-	--tile-border: conic-gradient(
+	/* --tile-border: conic-gradient(
 		#00000080,
 		#00000040,
 		#00000030,
@@ -37,6 +37,17 @@
 		#00000010,
 		#00000010,
 		#00000080
+	); */
+	--tile-start-rgb: 2, 13, 46;
+	--tile-end-rgb: 2, 5, 19;
+	--tile-border: conic-gradient(
+		#ffffff80,
+		#ffffff40,
+		#ffffff30,
+		#ffffff20,
+		#ffffff10,
+		#ffffff10,
+		#ffffff80
 	);
 
 	--callout-rgb: 238, 240, 241;
@@ -79,6 +90,7 @@
 		--callout-border-rgb: 108, 108, 108;
 		--card-rgb: 100, 100, 100;
 		--card-border-rgb: 200, 200, 200;
+		--tertiaryColor: #debaba;
 	}
 }
 
