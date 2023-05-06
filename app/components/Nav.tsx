@@ -85,7 +85,7 @@ export default function Nav() {
 					</li>
 				</a>
 				<Link
-					href="/me"
+					href="/team"
 					className="cursor-pointer"
 					onClick={closeMenu}>
 					<li className="flex justify-between italic items-center px-4 lg:0">
