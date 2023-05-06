@@ -27,10 +27,10 @@ export default function Home() {
 	}, []);
 
 	return (
-		<main className="h-full flex flex-col items-center max-w-custom px-6 mt-20 sm:mt-10 sm:w-full lg:h-auto lg:mt-44">
-			<div className="h-96 px-8 flex flex-col items-center sm:mt-8 md:mb-20 lg:mt-10 lg:w-full">
+		<main className="h-full flex flex-col items-center max-w-custom px-2 mt-20 sm:mt-10 sm:w-full lg:h-auto lg:mt-44">
+			<div className="h-96 px-4 flex flex-col items-center sm:mt-8 md:mb-20 lg:mt-10 lg:w-full">
 				<h1 className="motion-safe:delay-500 motion-safe:animate-fadeInOne text-center text-5xl md:text-8xl md:mb-4 font-light lg:text-8xl">
-					Tell me{" "}
+					Tell us{" "}
 					<span className="italic font-bold text-pink-900">
 						your
 					</span>{" "}
@@ -48,7 +48,7 @@ export default function Home() {
 					.
 				</p>
 				<Link href="/contact" className="cursor-pointer">
-					<button className="motion-safe:delay-1000 motion-safe:animate-fadeInThree flex justify-center text-center border-2 border-secondairyColor border-opacity-50 text-mainColor py-2 px-4 mt-6 w-28 rounded-md hover:bg-transparent hover:text-white whitespace-nowrap hover:blur-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mainColor lg:w-48 lg:mb-2">
+					<button className="flex justify-center text-center border-2 border-secondairyColor border-opacity-50 text-mainColor py-2 px-4 mt-6 w-28 rounded-md hover:bg-white hover:text-mainColor whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mainColor lg:w-48 lg:mb-2">
 						let's chat
 					</button>
 				</Link>
@@ -100,7 +100,7 @@ export default function Home() {
 						<Services
 							image="/pink_pollos_logo.png"
 							name="full son of pink pollos"
-							description="WAre you looking for a skilled frontend developer? We proudly collaborate with Pink Pollos, an organization renowned for its commitment to Agile methodologies and professionalism. By choosing our services, you benefit from top-notch frontend developers who are well-versed in Agile practices, ensuring seamless integration with your team and exceptional results. Don't miss out on this unique opportunity to elevate your project with the expertise of Pink Pollos' talented developers!"
+							description="Are you looking for a skilled frontend developer? We proudly collaborate with Pink Pollos, an organization renowned for its commitment to Agile methodologies and professionalism. By choosing our services, you benefit from top-notch frontend developers who are well-versed in Agile practices, ensuring seamless integration with your team and exceptional results. Don't miss out on this unique opportunity to elevate your project with the expertise of Pink Pollos' talented developers!"
 						/>
 					</Link>
 				</div>

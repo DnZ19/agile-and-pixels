@@ -70,7 +70,7 @@ export default function Nav() {
 			<ul
 				className={`flex items-center text-mainColor text-lg md:text-xl lg:text-2xl lg:gap-10 ${
 					isMenuOpen
-						? "bg-mainBgColor w-full absolute left-0 top-0 h-48 flex flex-row justify-center py-4 lg:py-8 gap-2"
+						? "bg-mainBgColor w-full absolute left-0 top-0 h-48 flex flex-row justify-center py-4 lg:py-4 gap-2"
 						: "hidden"
 				} lg:flex flex-row`}>
 				{/* Navigation Links */}
@@ -80,7 +80,7 @@ export default function Nav() {
 					rel="noopener noreferrer"
 					className="cursor-pointer"
 					onClick={closeMenu}>
-					<li className="flex justify-between items-center px-6 lg:px-0">
+					<li className="flex justify-between items-center px-4 lg:px-0">
 						resume
 					</li>
 				</a>
@@ -88,8 +88,8 @@ export default function Nav() {
 					href="/me"
 					className="cursor-pointer"
 					onClick={closeMenu}>
-					<li className="flex justify-between italic items-center px-6 lg:px-0">
-						me
+					<li className="flex justify-between italic items-center px-4 lg:0">
+						Team
 					</li>
 				</Link>
 				<Link
