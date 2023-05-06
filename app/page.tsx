@@ -72,7 +72,8 @@ export default function Home() {
 						<Services
 							image="/shutterstock_1391807393.jpg"
 							name="Agile Transition"
-							description="Our Agile Coach service empowers teams to reach their full potential in an agile environment. We offer tailored coaching and mentorship, guiding organizations through agile transformations, optimizing processes, fostering a culture of continuous improvement, and developing agile leadership skills. With our expertise, your team can enhance collaboration, adaptability, and project delivery, driving sustainable agile success."
+							description="
+							We provide expert consultants for agile transformation, customized framework and structure solutions tailored to your organization's needs, and change management strategies supported by MBA-level knowledge. Our services are designed to propel your organization towards success, ensuring a smooth and effective transition to agile methodologies."
 						/>
 					</Link>
 					<Link
@@ -81,7 +82,7 @@ export default function Home() {
 						<Services
 							image="/shutterstock_1918258610.jpg"
 							name="WebApp development"
-							description="Our Agile Coach service empowers teams to reach their full potential in an agile environment. We offer tailored coaching and mentorship, guiding organizations through agile transformations, optimizing processes, fostering a culture of continuous improvement, and developing agile leadership skills. With our expertise, your team can enhance collaboration, adaptability, and project delivery, driving sustainable agile success."
+							description="We offer skilled frontend engineers adept at building modern apps and software in an agile manner. Seamlessly integrating into your organization, they contribute to fostering a more Agile work environment while also possessing the potential to serve as Scrum Masters. Our engineers are dedicated to helping your team grow and adapt to the agile landscape, ensuring efficient project delivery and continuous improvement."
 						/>
 					</Link>
 					<Link
@@ -89,8 +90,8 @@ export default function Home() {
 						className="cursor-pointer">
 						<Services
 							image="/shutterstock_1801873138.jpg"
-							name="Coaching & Facilitating teams"
-							description="Our Agile Coach service empowers teams to reach their full potential in an agile environment. We offer tailored coaching and mentorship, guiding organizations through agile transformations, optimizing processes, fostering a culture of continuous improvement, and developing agile leadership skills. With our expertise, your team can enhance collaboration, adaptability, and project delivery, driving sustainable agile success."
+							name="Facilitating teams & events"
+							description="Our experts specialize in facilitating teams and agile events, ensuring a smooth and efficient process in your organization. With a deep understanding of agile methodologies, our facilitators help create a collaborative and adaptive environment, guiding your team towards continuous improvement and success. Whether it's sprint planning, retrospectives, or daily stand-ups, our services ensure that your team's progress is on track and in alignment with your organization's Agile goals."
 						/>
 					</Link>
 					<Link
@@ -99,7 +100,7 @@ export default function Home() {
 						<Services
 							image="/pink_pollos_logo.png"
 							name="full son of pink pollos"
-							description="We mentor young professional frontend developers in professional and agile skills."
+							description="WAre you looking for a skilled frontend developer? We proudly collaborate with Pink Pollos, an organization renowned for its commitment to Agile methodologies and professionalism. By choosing our services, you benefit from top-notch frontend developers who are well-versed in Agile practices, ensuring seamless integration with your team and exceptional results. Don't miss out on this unique opportunity to elevate your project with the expertise of Pink Pollos' talented developers!"
 						/>
 					</Link>
 				</div>

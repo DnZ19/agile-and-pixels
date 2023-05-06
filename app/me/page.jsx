@@ -5,13 +5,15 @@ export default function Me() {
 	return (
 		<main className="h-full flex flex-col items-center max-w-custom px-6 mt-20 sm:mt-10 sm:w-full lg:h-auto lg:mt-44">
 			<div className="h-auto mt-[-60px] px-8 flex flex-col items-center sm:mt-3 md:mb-20 lg:mt-10 lg:w-full">
-				<h1 className="text-center text-5xl md:text-8xl md:mb-4 font-light lg:text-8xl">
-					A little{" "}
-					<span className="italic font-bold text-pink-900">
-						about
-					</span>{" "}
-					my own story.
-				</h1>
+				<a id="/me">
+					<h1 className="text-center text-5xl md:text-8xl md:mb-4 font-light lg:text-8xl">
+						A little{" "}
+						<span className="italic font-bold text-pink-900">
+							about
+						</span>{" "}
+						my own story.
+					</h1>
+				</a>
 				<div className="bg-cover w-full h-auto mx-8 mt-10">
 					<Image
 						src="/lake.png"

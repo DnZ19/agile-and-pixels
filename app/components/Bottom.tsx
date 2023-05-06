@@ -9,16 +9,14 @@ export default function Bottom() {
 				<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 md:p-8">
 					<div className="text-center sm:text-left">
 						<h1 className="font-light mb-2">
-							Company Name
+							Agile & Pixels B.V.
 						</h1>
-						<p>1234 Example St</p>
-						<p>City, State 12345</p>
-						<p>Country</p>
+						<p>Amersfoort</p>
+						<p>Netherlands</p>
 					</div>
 					<div className="text-center sm:text-left">
 						<h1 className="font-light mb-2">Contact</h1>
-						<p>Telephone: +1 (123) 456-7890</p>
-						<p>Email: info@example.com</p>
+						<p>Email: info@agileandpixels.com</p>
 					</div>
 					<div className="text-center sm:text-left">
 						<h1 className="font-light mb-2">
@@ -27,12 +25,12 @@ export default function Bottom() {
 						<p>Monday - Friday: 9am - 5pm</p>
 						<p>Saturday - Sunday: Closed</p>
 					</div>
-					<div className="text-center sm:text-left">
+					{/* <div className="text-center sm:text-left">
 						<h1 className="font-light mb-2">Follow Us</h1>
 						<p>Facebook</p>
 						<p>Twitter</p>
 						<p>LinkedIn</p>
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</div>
