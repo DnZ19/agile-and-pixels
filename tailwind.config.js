@@ -21,24 +21,31 @@ module.exports = {
 				custom: "1400px",
 			},
 			colors: {
-				tertiaryColor: "#debaba",
+				tertiaryColor: "#e0e1dd",
 			},
 			textColor: {
-				mainColor: "#222222",
-				secondairyColor: "#F7F7F7",
+				mainColor: "#e0e1dd",
+				secondairyColor: "#f48c06",
+				tertiarColor: "#f48c06",
+				serviceColor: "#ffffff",
+				buttonText: "#1b263b",
 			},
 			backgroundColor: {
-				mainBgColor: "#f4cccc",
-				secondaryColor: "#222222",
-				tertiaryColor: "#debaba",
+				mainBgColor: "#1b263b",
+				secondaryColor: "#1b263b",
+				tertiaryColor: "#e0e1dd",
 			},
 			borderColor: {
-				mainColor: "#222222",
-				secondairyColor: "#F7F7F7",
+				mainColor: "#778da9",
+				secondairyColor: "#415a77",
 			},
 			fontFamily: {
 				"custom-font-logo": [
 					"CustomLogoFont",
+					"sans-serif",
+				],
+				"custom-font-italic": [
+					"CustomItalicFont",
 					"sans-serif",
 				],
 			},

@@ -41,7 +41,6 @@
 	--callout-border-rgb: 108, 108, 108;
 	--card-rgb: 100, 100, 100;
 	--card-border-rgb: 200, 200, 200;
-	--tertiaryColor: #debaba;
 }
 
 * {
@@ -79,7 +78,17 @@ a {
 
 @font-face {
 	font-family: "CustomLogoFont";
-	src: url("/Audiowide.ttf") format("truetype");
+	src: url("/fonts/PPAgrandir-Regular.otf")
+		format("truetype");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "CustomItalicFont";
+	src: url("/fonts/PPAgrandir-ThinItalic.otf")
+		format("truetype");
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;

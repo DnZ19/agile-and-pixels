@@ -9,7 +9,7 @@ export default function Team() {
 			<div className="h-auto mt-[-50px] px-8 flex flex-col items-center sm:mt-3 md:mb-20 lg:mt-0 lg:w-full">
 				<h1 className="text-center text-5xl md:text-8xl md:mb-4 font-light lg:text-8xl">
 					A little{" "}
-					<span className="italic font-bold text-pink-900">
+					<span className="italic font-bold text-secondairyColor">
 						about
 					</span>{" "}
 					our own story.
@@ -58,7 +58,7 @@ export default function Team() {
 				</p>
 				<div className="w-full mt-6 flex flex-row justify-center items-center">
 					<Link href="/contact" className="cursor-pointer">
-						<button className="text-center border-2 border-secondairyColor border-opacity-50 text-secondairyColor py-2 px-4 mt-6 w-28 rounded-md hover:bg-transparent hover:text-white whitespace-nowrap hover:blur-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mainColor lg:w-48 lg:mb-2">
+						<button className="flex justify-center text-center bg-tertiaryColor text-buttonText py-2 px-4 mt-6 w-28 text-xl font-semibold rounded-md hover:bg-secondaryColor hover:text-secondairyColor whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mainColor lg:w-48 lg:mb-2">
 							let's chat
 						</button>
 					</Link>

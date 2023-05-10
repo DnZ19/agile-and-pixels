@@ -37,14 +37,14 @@ export default function ReachtOut() {
 					type="name"
 					name="name"
 					placeholder="Your name"
-					className="w-full px-3 py-2 text-pink-100 placeholder-pink-100 bg-black rounded-sm focus:outline-none focus:ring-pink-500 focus:border-pink-500 sm:text-sm"
+					className="w-full px-3 py-2 text-secondairyColor placeholder-slate-100 bg-secondaryColor rounded-sm focus:outline-none focus:ring-slate-500 focus:border-slate-100 sm:text-sm"
 				/>
 				<input
 					id="email"
 					type="email"
 					name="email"
 					placeholder="Your email"
-					className="w-full px-3 py-2 text-pink-100 placeholder-pink-100 bg-black rounded-sm focus:outline-none focus:ring-pink-500 focus:border-pink-500 sm:text-sm"
+					className="w-full px-3 py-2 text-secondairyColor placeholder-slate-100 bg-secondaryColor rounded-sm focus:outline-none focus:ring-slate-500 focus:border-slate-100 sm:text-sm"
 				/>
 				<ValidationError
 					prefix="Email"
@@ -56,7 +56,8 @@ export default function ReachtOut() {
 					id="message"
 					name="message"
 					placeholder="Leave me a message..."
-					className="w-full h-20 px-3 py-2 text-pink-100 placeholder-pink-100 bg-black rounded-sm focus:outline-none focus:ring-pink-500 focus:border-pink-100 sm:text-sm"
+					rows={parseInt("5")}
+					className="w-full px-3 py-2 text-secondairyColor placeholder-slate-100 bg-secondaryColor rounded-sm focus:outline-none focus:ring-slate-500 focus:border-slate-100 sm:text-sm"
 				/>
 				<ValidationError
 					prefix="Message"
@@ -67,7 +68,7 @@ export default function ReachtOut() {
 				<button
 					type="submit"
 					disabled={state.submitting}
-					className="w-20 px-4 py-2 text-sm font-medium text-white bg-transparent border-2 border-secondairyColor rounded-md hover:bg-tertiaryColor focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-100">
+					className="w-full px-3 py-2 text-buttonText placeholder-slate-900 bg-tertiaryColor rounded-sm focus:outline-none focus:ring-slate-500 focus:border-slate-100 sm:text-sm lg:text-lg lg:font-semibold">
 					Submit
 				</button>
 			</form>

@@ -19,11 +19,11 @@ export default function Nav() {
 			<div className="flex flex-col items-center justify-center w-full">
 				<div className="flex flex-col items-center justify-center w-full lg:items-start lg:py-0 lg:mt-4">
 					<Link href="/" className="cursor-pointer">
-						<h1 className="font-custom-font-logo text-4xl sm:text-6xl sm:mb-8 md:text-8xl md:mb-10 text-mainColor opacity-50 mt-6 lg:text-5xl lg:mb-0 lg:mt-0">
+						<h1 className="font-custom-font-logo text-4xl sm:text-6xl sm:mb-8 md:text-8xl md:mb-10 text-tertiarColor mt-6 lg:text-5xl lg:mb-0 lg:mt-0">
 							Agile & Pixels
 						</h1>
 					</Link>
-					<p className="mt-1 text-xs md:text-lg text-mainColor font-light italic lg:mb-0 lg:mt-2 lg:text-xs xl:text-lg">
+					<p className="mt-1 text-xs md:text-lg text-tertiaryColor font-custom-font-italic lg:pl-1 lg:mb-0 lg:mt-2 lg:text-xs xl:text-lg">
 						Agile Coaching / Frontend / Fullstack
 					</p>
 				</div>
@@ -97,7 +97,7 @@ export default function Nav() {
 					className="cursor-pointer"
 					onClick={closeMenu}>
 					<li className="bg-transparent text-mainColor py-2 px-4 cursor-pointer rounded-md">
-						<button className="flex justify-center text-center border-2 border-secondairyColor border-opacity-60 text-mainColor py-2 px-4 rounded-md hover:bg-transparent hover:text-mainColor whitespace-nowrap hover:blur-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mainColor">
+						<button className="flex justify-center text-center border-2 border-secondairyColor border-opacity-60 text-mainColor py-2 px-4 rounded-md hover:bg-transparent hover:text-secondairyColor whitespace-nowrap hover:blur-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mainColor">
 							reach out
 						</button>
 					</li>

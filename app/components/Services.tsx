@@ -16,10 +16,10 @@ export default function Services({
 				className="rounded-md md:min-h-[200px] lg:min-h-[320px] xl:min-h-[450px]"
 				sizes="(min-width: 768px) 300px, (min-width: 1024px) 230px, (min-width: 1280px) 300px, 100vw"
 			/>
-			<h1 className="font-custom-font-logo text-secondairyColor opacity-60 text-xl sm:text-2xl py-8 lg:text-3xl">
+			<h1 className="font-custom-font-logo text-serviceColor opacity-90 text-xl sm:text-2xl py-8 lg:text-3xl">
 				{name}
 			</h1>
-			<p className="text-secondairyColor text-justify lg:text-lg">
+			<p className="text-serviceColor text-justify lg:text-lg">
 				{description}
 			</p>
 		</div>

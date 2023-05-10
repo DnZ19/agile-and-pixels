@@ -31,29 +31,29 @@ export default function Home() {
 			<div className="h-96 px-4 flex flex-col items-center sm:mt-8 md:mb-20 lg:mt-10 lg:w-full">
 				<h1 className="motion-safe:delay-500 motion-safe:animate-fadeInOne text-center text-5xl md:text-8xl md:mb-4 font-light lg:text-8xl">
 					Tell us{" "}
-					<span className="italic font-bold text-pink-900">
+					<span className="italic font-bold text-secondairyColor">
 						your
 					</span>{" "}
 					Agile Story
 				</h1>
 				<p className="motion-safe:delay-1000 motion-safe:animate-fadeInTwo text-xl md:text-4xl font-extralight text-center italic lg:text-2xl py-6">
 					Together we will look for ways to let{" "}
-					<span className="not-italic font-semibold underline text-pink-900">
+					<span className="not-italic font-semibold underline text-secondairyColor">
 						your organization
 					</span>{" "}
 					grow more{" "}
-					<span className="font-medium text-pink-900">
+					<span className="font-medium text-secondairyColor">
 						Agile
 					</span>
 					.
 				</p>
 				<Link href="/contact" className="cursor-pointer">
-					<button className="flex justify-center text-center border-2 border-secondairyColor border-opacity-50 text-mainColor py-2 px-4 mt-6 w-28 rounded-md hover:bg-white hover:text-mainColor whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mainColor lg:w-48 lg:mb-2">
+					<button className="flex justify-center text-center bg-tertiaryColor text-buttonText py-2 px-4 mt-6 w-28 text-xl font-semibold rounded-md hover:bg-secondaryColor hover:text-secondairyColor whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mainColor lg:w-48 lg:mb-2">
 						let's chat
 					</button>
 				</Link>
 				<div>
-					<IoMdArrowDown className="mt-16 text-4xl text-pink-900 lg:mt-20" />
+					<IoMdArrowDown className="mt-16 text-4xl text-secondairyColor lg:mt-20" />
 				</div>
 			</div>
 
@@ -61,7 +61,7 @@ export default function Home() {
 				className={`transition-opacity duration-1000 ease-in-out py-2 px-4 pb-20 rounded-md flex flex-col items-center justify-center gap-12 sm:w-full lg:border-2 lg:border-opacity-10 lg:border-secondairyColor mt-12 mb-4 ${
 					showServices ? "opacity-100" : "opacity-0"
 				}`}>
-				<h1 className="w-full flex justify-center text-4xl text-mainColor font-light">
+				<h1 className="w-full flex justify-center text-4xl lg:text-6xl text-mainColor font-light">
 					Services
 				</h1>
 
