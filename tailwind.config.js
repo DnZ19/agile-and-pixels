@@ -31,7 +31,7 @@ module.exports = {
 				buttonText: "#1b263b",
 			},
 			backgroundColor: {
-				mainBgColor: "#1b263b",
+				mainBgColor: "#313C52",
 				secondaryColor: "#1b263b",
 				tertiaryColor: "#e0e1dd",
 			},

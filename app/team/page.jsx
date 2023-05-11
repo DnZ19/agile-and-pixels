@@ -12,7 +12,7 @@ export default function Team() {
 					<span className="italic font-bold text-secondairyColor">
 						about
 					</span>{" "}
-					our own story.
+					my own story.
 				</h1>
 				<p className="max-w-8xl text-xl md:text-4xl font-extralight text-justify italic lg:text-2xl lg:mt-10">
 					<div className="bg-cover w-800 float-left mr-6 mt-2">
@@ -24,37 +24,53 @@ export default function Team() {
 							className="w-full"
 						/>
 					</div>
-					Our journey began with a highly capable Agile
-					team, where we mastered various skills and formed
-					lasting bonds with our fellow members. This
-					incredible experience laid the foundation for our
-					understanding of what it takes to thrive in a
-					high-performing team. Over the years, our
-					expertise has expanded rapidly as we worked with
-					diverse organizations and participated in numerous
-					Agile transitions.
+					Welcome to a world where change is not just a
+					necessity but a catalyst for growth. A world that
+					thrives on evolution, opening up new landscapes to
+					explore and fresh opportunities to seize every
+					day. In this dynamic landscape, I've found my
+					calling - merging my passion for change with my
+					profession, leveraging my MBA in Change Management
+					to make a tangible difference.
 					<br />
 					<br />
-					We've noticed that young professionals often don't
-					receive adequate Agile training in their academic
-					or early professional environments. This lack of
-					knowledge can hinder their integration into Agile
-					teams, causing difficulties for both the newcomers
-					and their colleagues. We believe that young
-					professionals should be well-versed in Agile
-					practices right from the start.
+					As a seasoned Agile coach and consultant, my
+					commitment is not merely to facilitate
+					transformation but to empower individuals, teams,
+					and organisations to become change-makers. Having
+					extensively studied and mastered the complexities
+					of organisational change during my MBA, I
+					understand that the process can often feel like
+					navigating a labyrinth. However, with the Agile
+					mindset and the right guidance, we can transform
+					these complexities into stepping stones towards
+					progress.
 					<br />
 					<br />
-					That's where we come in. We not only train our
-					professionals in their specific areas of
-					expertise, but we also emphasize the Agile way of
-					working and mentor them in the assignment. By
-					equipping them with the necessary skills and
-					knowledge, we ensure a swift learning curve and
-					seamless integration into any Agile project. Allow
-					us to help you build and maintain high-performing
-					teams that drive success and foster a culture of
-					continuous improvement.
+					Change begins with understanding the 'Why'. Why is
+					Agile the right choice for you? Why should your
+					team or organisation evolve? The resonance of this
+					'Why' is the ignition point for your Agile journey
+					- a journey of iterative learning, self-discovery,
+					and consistent improvement. Once this 'Why'
+					resonates within you, we can then chart the path
+					ahead, identifying where you want to go and how to
+					best get there.
+					<br />
+					<br />
+					However, the journey of change, while rewarding,
+					is rarely a straightforward one. There may be
+					times when you'll need a guide, a coach to help
+					navigate the rough patches. That's where I come
+					in. As an Agile expert and a change management
+					professional, I am equipped to support you through
+					these challenges, helping you turn obstacles into
+					opportunities.
+					<br />
+					<br />
+					Together, let's harness the power of Agile and the
+					science of Change Management to revolutionise your
+					tomorrow... Today.
 				</p>
 				<div className="w-full mt-6 flex flex-row justify-center items-center">
 					<Link href="/contact" className="cursor-pointer">

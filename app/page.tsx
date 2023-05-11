@@ -72,7 +72,7 @@ export default function Home() {
 					What I do
 				</h1>
 
-				<div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center justify-center h-auto lg:min-h-[300px] lg:items-start">
+				<div className="grid grid-cols-1 lg:grid-cols-4 gap-4 items-center justify-center h-auto lg:min-h-[300px] lg:items-start">
 					<Link
 						href="/agile_transition_service"
 						className="cursor-pointer">
