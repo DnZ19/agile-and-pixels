@@ -89,7 +89,7 @@ export default function Nav() {
 					className="cursor-pointer"
 					onClick={closeMenu}>
 					<li className="flex justify-between italic items-center px-4 lg:0">
-						Team
+						me
 					</li>
 				</Link>
 				<Link
