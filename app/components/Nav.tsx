@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { SiLinkedin } from "react-icons/all";
 
 export default function Nav() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -84,8 +85,8 @@ export default function Nav() {
 					rel="noopener noreferrer"
 					className="cursor-pointer"
 					onClick={closeMenu}>
-					<li className="flex justify-between items-center px-4 lg:px-0 hover:text-tertiarColor">
-						resume
+					<li className="flex justify-between items-center text-4xl px-4 lg:px-0 hover:text-tertiarColor">
+						<SiLinkedin />
 					</li>
 				</a>
 				<Link
