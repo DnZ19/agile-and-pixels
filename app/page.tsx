@@ -56,7 +56,7 @@ export default function Home() {
 				</p>
 				<Link href="/contact" className="cursor-pointer">
 					<button className="flex justify-center text-center bg-tertiaryColor text-buttonText py-2 px-4 mt-6 w-28 text-xl font-semibold rounded-md hover:bg-secondaryColor hover:text-secondairyColor whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mainColor lg:w-48 lg:mb-2">
-						let's chat
+						Connect
 					</button>
 				</Link>
 				<div>

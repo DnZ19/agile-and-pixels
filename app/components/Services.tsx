@@ -22,7 +22,7 @@ export default function Services({
 				<h1 className="font-custom-font-logo text-secondairyColor text-xl sm:text-2xl py-4 lg:text-2xl">
 					{name}
 				</h1>
-				<p className="text-neutral-950 text-justify lg:text-lg">
+				<p className="text-neutral-950 pb-4 text-justify lg:text-lg">
 					{description}
 				</p>
 			</div>
