@@ -5,19 +5,19 @@ import Image from "next/image";
 
 export default function Team() {
 	return (
-		<main className="h-full flex flex-col items-center max-w-custom mt-20 px-6 sm:mt-10 sm:w-full lg:h-auto lg:mt-10">
+		<main className="h-full flex flex-col items-center max-w-custom mt-20 px-2 sm:mt-10 sm:w-full lg:h-auto lg:mt-10">
 			<div className="h-auto mt-[-50px] px-8 flex flex-col items-center sm:mt-3 md:mb-20 lg:mt-0 lg:w-full">
-				<h1 className="text-center text-5xl md:text-8xl md:mb-4 font-light lg:text-8xl">
+				<h1 className="text-center text-6xl md:text-8xl md:mb-4 font-light lg:text-8xl">
 					A little{" "}
-					<span className="italic font-bold text-secondairyColor">
+					<span className="font-custom-font-italic text-secondairyColor">
 						about
 					</span>{" "}
-					my own story.
+					me.
 				</h1>
-				<p className="max-w-8xl text-xl md:text-4xl font-extralight text-justify italic lg:text-2xl lg:mt-10">
-					<div className="bg-cover w-800 float-left mr-6 mt-2">
+				<p className="max-w-8xl text-md md:text-4xl font-extralight text-justify lg:text-2xl lg:mt-10">
+					<div className="bg-cover w-800 md:float-left md:mr-6 mt-4 mb-8">
 						<Image
-							src="/boat.png"
+							src="/rails.png"
 							alt="waterlogo"
 							width={500}
 							height={500}
@@ -43,6 +43,15 @@ export default function Team() {
 					someone to initiate change, feel free to reach out
 					to me.
 					<br />
+					<div className="bg-cover w-800 md:hidden md:mr-6 mt-4 mb-4">
+						<Image
+							src="/lake.png"
+							alt="waterlogo"
+							width={500}
+							height={500}
+							className="w-full"
+						/>
+					</div>
 					<br />
 					Additionally, if you want a more hands on approach
 					and develop a team from an Agile or technical
