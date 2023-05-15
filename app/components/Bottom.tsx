@@ -17,6 +17,11 @@ export default function Bottom() {
 					<div className="text-center sm:text-left">
 						<h1 className="font-light mb-2">Contact</h1>
 						<p>info@agileandpixels.com</p>
+						<a href="https://jomiro.webflow.io/">
+							<p className="text-tertiarColor italic">
+								inspired by: https://jomiro.webflow.io/
+							</p>
+						</a>
 					</div>
 					{/* <div className="text-center sm:text-left">
 						<h1 className="font-light mb-2">
