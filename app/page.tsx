@@ -68,44 +68,40 @@ export default function Home() {
 				className={`transition-opacity duration-1000 ease-in-out py-2 px-4 pb-20 rounded-md flex flex-col items-center justify-center gap-12 sm:w-full lg:border-2 lg:border-opacity-10 lg:border-secondairyColor mt-12 mb-4 ${
 					showServices ? "opacity-100" : "opacity-0"
 				}`}>
-				<h1 className="w-full flex justify-center text-4xl lg:text-6xl text-mainColor font-light">
+				<h1 className="w-full flex justify-center text-4xl lg:text-6xl text-slate-100 font-light">
 					I can help you with...
 				</h1>
 
 				<div className="grid grid-cols-1 lg:grid-cols-4 gap-4 items-center justify-center h-auto lg:min-h-[300px] lg:items-start">
-					<Link
-						href="/agilecoach"
-						className="cursor-pointer">
+					<Link href="/contact" className="cursor-pointer">
 						<Services
 							image="/shutterstock_1391807393.jpg"
 							name="Agile Coaching"
 							description="
-							I have an HEAO and MBA in change management and turned that into Agile practice for the last decade. I have been at top 500 organisation in and outside Europe and have been able to put this knowledge into practtice for many clients. Besides that I am certified team coach I also know a lot about what to do when teams need to scale"
+							If you need an Agile Coach with experience in Scaling Agile Teams, change management and technical knowledge, let's meet!"
 						/>
 					</Link>
-					<Link
-						href="/scrummaster"
-						className="cursor-pointer">
+					<Link href="/contact" className="cursor-pointer">
 						<Services
 							image="/shutterstock_1918258610.jpg"
 							name="Scrum Master"
-							description="The Scrum Master role is often underestimated and underrated maybe even. Let me step into one or two teams and guide them towards high performing teams. I also am able to combine this with a more technical role if needed and the fit is there."
+							description="If you need a more hands on approach in getting a team to the next level on high performance, call me!"
 						/>
 					</Link>
-					<Link href="/frontend" className="cursor-pointer">
+					<Link href="/contact" className="cursor-pointer">
 						<Services
 							image="/shutterstock_1801873138.jpg"
-							name="Frontend Developer"
+							name="Frontend Developement"
 							description="Are you looking for a FrontEnd developer with a strong Agile background? I can help you."
 						/>
 					</Link>
 					<Link
-						href="/pinkpollos"
+						href="http://www.pinkpollos.com"
 						className="cursor-pointer">
 						<Services
-							image="/pink_pollos_logo.png"
+							image="/pinkpollosbackground.png"
 							name="Looking for Talent?"
-							description="If you are looking for Frontend and Agile Talent, Pink Pollos is the new go to place for you!"
+							description="If you are looking for Frontend and Agile Talent, Pink Pollos is the new go-to-place for you!"
 						/>
 					</Link>
 				</div>

@@ -13,6 +13,14 @@ module.exports = {
 			xl: "1280px",
 			"2xl": "1536px",
 		},
+		borderWidth: {
+			DEFAULT: "1px",
+			0: "0",
+			0.5: "0.5px",
+			1: "1px",
+			2: "2px",
+			// additional sizes...
+		},
 		extend: {
 			blur: {
 				md: "4px",
@@ -31,7 +39,7 @@ module.exports = {
 				buttonText: "#1b263b",
 			},
 			backgroundColor: {
-				mainBgColor: "#313C52",
+				mainBgColor: "#0f0f0f",
 				secondaryColor: "#1b263b",
 				tertiaryColor: "#e0e1dd",
 			},
