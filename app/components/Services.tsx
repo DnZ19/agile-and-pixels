@@ -8,7 +8,7 @@ export default function Services({
 }: ProductType) {
 	return (
 		<div className="w-auto mt-8 sm:px-4 lg:w-full lg:px-0">
-			<Image
+			{/* <Image
 				src={image}
 				alt={name}
 				width={1400}
@@ -21,7 +21,9 @@ export default function Services({
 			</h1>
 			<p className="text-serviceColor text-justify lg:text-lg">
 				{description}
-			</p>
+			</p> */}
+
+			<h1>Under Construction</h1>
 		</div>
 	);
 }
