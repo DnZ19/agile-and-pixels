@@ -69,12 +69,12 @@ export default function Home() {
 					showServices ? "opacity-100" : "opacity-0"
 				}`}>
 				<h1 className="w-full flex justify-center text-4xl lg:text-6xl text-mainColor font-light">
-					What I do
+					I can help you with...
 				</h1>
 
 				<div className="grid grid-cols-1 lg:grid-cols-4 gap-4 items-center justify-center h-auto lg:min-h-[300px] lg:items-start">
 					<Link
-						href="/agile_transition_service"
+						href="/agilecoach"
 						className="cursor-pointer">
 						<Services
 							image="/shutterstock_1391807393.jpg"
@@ -84,30 +84,28 @@ export default function Home() {
 						/>
 					</Link>
 					<Link
-						href="/web_app_development_service"
+						href="/scrummaster"
 						className="cursor-pointer">
 						<Services
 							image="/shutterstock_1918258610.jpg"
 							name="Scrum Master"
-							description="The Scrum Master role is often underestimated and underrated maybe even. I somethimes step into one or two teams and guide them towards top teams. I also am able to combine this with a more technical role if needed and the fit is there."
+							description="The Scrum Master role is often underestimated and underrated maybe even. Let me step into one or two teams and guide them towards high performing teams. I also am able to combine this with a more technical role if needed and the fit is there."
 						/>
 					</Link>
-					<Link
-						href="/coaching_facilitating_service"
-						className="cursor-pointer">
+					<Link href="/frontend" className="cursor-pointer">
 						<Services
 							image="/shutterstock_1801873138.jpg"
-							name=" Frontend Developer"
-							description="I am a frontend developer with full stack knowledge. I focus on React, Next and typescript / Javascript, but also know about Java, SpringBoot, PostgreSQL and Postman. I have a recent certificate to back that up."
+							name="Frontend Developer"
+							description="Are you looking for a FrontEnd developer with a strong Agile background? I can help you."
 						/>
 					</Link>
 					<Link
-						href="/son_of_pollos"
+						href="/pinkpollos"
 						className="cursor-pointer">
 						<Services
 							image="/pink_pollos_logo.png"
-							name="Partner of Pink Pollos"
-							description="Pink Pollos is where you want to go if you need an Agile fontend teamplayer. "
+							name="Looking for Talent?"
+							description="If you are looking for Frontend and Agile Talent, Pink Pollos is the new go to place for you!"
 						/>
 					</Link>
 				</div>

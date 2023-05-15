@@ -80,15 +80,15 @@ export default function Nav() {
 					rel="noopener noreferrer"
 					className="cursor-pointer"
 					onClick={closeMenu}>
-					<li className="flex justify-between items-center px-4 lg:px-0">
+					<li className="flex justify-between items-center px-4 lg:px-0 hover:text-tertiarColor">
 						resume
 					</li>
 				</a>
 				<Link
-					href="/team"
+					href="/me"
 					className="cursor-pointer"
 					onClick={closeMenu}>
-					<li className="flex justify-between italic items-center px-4 lg:0">
+					<li className="flex justify-between italic items-center px-4 lg:0 hover:text-tertiarColor">
 						me
 					</li>
 				</Link>
