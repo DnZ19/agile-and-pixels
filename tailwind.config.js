@@ -46,6 +46,7 @@ module.exports = {
 			borderColor: {
 				mainColor: "#778da9",
 				secondairyColor: "#415a77",
+				tertiaryColor: "#f48c06",
 			},
 			fontFamily: {
 				"custom-font-logo": [

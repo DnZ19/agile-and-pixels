@@ -55,7 +55,7 @@ export default function Home() {
 					.
 				</p>
 				<Link href="/contact" className="cursor-pointer">
-					<button className="flex justify-center text-center bg-tertiaryColor text-buttonText py-2 px-4 mt-6 w-28 text-xl font-semibold rounded-md hover:bg-secondaryColor hover:text-secondairyColor whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mainColor lg:w-48 lg:mb-2">
+					<button className="flex justify-center text-center bg-tertiaryColor text-buttonText py-2 px-4 mt-6 w-28 text-xl font-semibold rounded-md hover:bg-transparent hover:text-secondairyColor hover:border-1 whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mainColor lg:w-48 lg:mb-2">
 						Connect
 					</button>
 				</Link>
@@ -65,11 +65,12 @@ export default function Home() {
 			</div>
 
 			<div
-				className={`transition-opacity duration-1000 ease-in-out py-2 px-4 pb-20 rounded-md flex flex-col items-center justify-center gap-12 sm:w-full lg:border-2 lg:border-opacity-10 lg:border-secondairyColor mt-12 mb-4 ${
+				className={`transition-opacity duration-1000 ease-in-out bg-white bg-opacity-5 py-8 px-4 pb-20 rounded-md flex flex-col items-center justify-center gap-12 sm:w-full lg:border-2 lg:border-opacity-10 lg:border-secondairyColor mt-12 mb-4 ${
 					showServices ? "opacity-100" : "opacity-0"
 				}`}>
-				<h1 className="w-full flex justify-center text-4xl lg:text-6xl text-slate-100 font-light">
-					I can help you with...
+				<h1 className="w-full text-center text-4xl lg:text-6xl text-slate-100 font-light font-custom-font-logo">
+					I can help you with
+					<span className="text-secondairyColor">...</span>
 				</h1>
 
 				<div className="grid grid-cols-1 lg:grid-cols-4 gap-4 items-center justify-center h-auto lg:min-h-[300px] lg:items-start">
@@ -96,7 +97,8 @@ export default function Home() {
 						/>
 					</Link>
 					<Link
-						href="http://www.pinkpollos.com"
+						//href="http://www.pinkpollos.com"
+						href="/contact"
 						className="cursor-pointer">
 						<Services
 							image="/pinkpollosbackground.png"
@@ -105,6 +107,11 @@ export default function Home() {
 						/>
 					</Link>
 				</div>
+				<Link href="/contact" className="cursor-pointer">
+					<button className="flex justify-center text-center bg-tertiaryColor text-buttonText py-2 px-4 mt-6 w-28 text-xl font-semibold rounded-md hover:bg-transparent hover:text-secondairyColor hover:border-1 whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mainColor lg:w-48 lg:mb-2">
+						Connect
+					</button>
+				</Link>
 
 				{/* <div className="bg-cover w-auto mx-8 rounded-md mt-10 md:w-full md:p-4">
 					<Image
