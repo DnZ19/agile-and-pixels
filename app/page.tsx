@@ -8,15 +8,18 @@ import Link from "next/link";
 
 export default function Home() {
 	const [showServices, setShowServices] = useState(false);
+	const [showHero, setShowHero] = useState(true);
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
 
 		const handleScroll = () => {
-			if (window.scrollY > 50) {
+			if (window.scrollY > 80) {
 				setShowServices(true);
+				setShowHero(false);
 			} else {
 				setShowServices(false);
+				setShowHero(true);
 			}
 		};
 
@@ -27,8 +30,11 @@ export default function Home() {
 	}, []);
 
 	return (
-		<main className="h-full flex flex-col items-center max-w-custom px-2 mt-20 sm:mt-10 sm:w-full lg:h-auto lg:mt-44">
-			<div className="h-96 px-4 flex flex-col items-center sm:mt-8 md:mb-20 lg:mt-10 lg:w-full">
+		<main className="h-full flex flex-col items-center max-w-custom px-2 mt-8 sm:mt-10 sm:w-full lg:h-auto lg:mt-44">
+			<div
+				className={`"transition-opacity duration-1000 ease-in-out delay-500 h-96 px-4 flex flex-col items-center sm:mt-8 md:mb-20 lg:mt-10 lg:w-full" ${
+					showHero ? "opacity-100" : "opacity-0"
+				}`}>
 				{/* <Image
 					src="/backgroundImage.svg"
 					width={500}
@@ -65,7 +71,7 @@ export default function Home() {
 			</div>
 
 			<div
-				className={`transition-opacity duration-1000 ease-in-out bg-white bg-opacity-5 py-8 px-4 pb-20 rounded-md flex flex-col items-center justify-center gap-12 sm:w-full lg:border-2 lg:border-opacity-10 lg:border-secondairyColor mt-12 mb-4 ${
+				className={`transition-opacity duration-1000 ease-in-out bg-white bg-opacity-5 py-8 px-4 pb-20 rounded-md flex flex-col items-center justify-center gap-12 sm:w-full lg:border-2 lg:border-opacity-10 lg:border-secondairyColor mt-[-420px] lg:-[-180px] mb-4 ${
 					showServices ? "opacity-100" : "opacity-0"
 				}`}>
 				<h1 className="w-full text-center text-4xl lg:text-6xl text-slate-100 font-light font-custom-font-logo">

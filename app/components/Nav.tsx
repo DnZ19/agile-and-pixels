@@ -41,7 +41,9 @@ export default function Nav() {
 					onClick={toggleMenu}>
 					<svg
 						className={`h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10 ${
-							isMenuOpen ? "hidden" : "block"
+							isMenuOpen
+								? "opacity-0"
+								: "opacity-100 ease-in duration-1000 delay-700"
 						}`}
 						fill="none"
 						viewBox="0 0 24 24"
@@ -54,10 +56,10 @@ export default function Nav() {
 						/>
 					</svg>
 					<svg
-						className={`h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10 ${
+						className={`h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10 transform ${
 							isMenuOpen
-								? "block top-0 right-0 absolute my-4 mx-4"
-								: "hidden"
+								? "opacity-100 top-0 right-0 absolute my-4 mx-4"
+								: "opacity-0 absolute"
 						}`}
 						fill="none"
 						viewBox="0 0 24 24"
@@ -71,21 +73,27 @@ export default function Nav() {
 					</svg>
 				</button>
 			</div>
-			{/* Navigation Links */}
+
 			<ul
-				className={`flex items-center text-mainColor text-lg md:text-xl lg:text-2xl lg:gap-10 ${
+				className={`flex items-center text-mainColor text-lg md:text-xl lg:text-2xl lg:gap-10 transform transition-transform duration-1000 ease-in-out ${
 					isMenuOpen
-						? "bg-mainBgColor w-full absolute left-0 top-0 h-48 flex flex-row justify-center py-4 lg:py-4 gap-2"
-						: "hidden"
+						? "bg-secondaryColor w-full absolute left-0 top-0 h-48 flex flex-row justify-center py-4 lg:py-4 gap-2 translate-y-0 delay-75"
+						: "bg-secondaryColor w-full absolute left-0 top-0 h-48 flex flex-row justify-center py-4 lg:py-4 gap-2 delay-700 translate-y-[-100%]"
 				} lg:flex flex-row`}>
 				{/* Navigation Links */}
+
 				<a
 					href="https://www.linkedin.com/in/dennisrijkers/"
 					target="_blank"
 					rel="noopener noreferrer"
 					className="cursor-pointer"
 					onClick={closeMenu}>
-					<li className="flex justify-between items-center text-4xl px-4 lg:px-0 hover:text-tertiarColor">
+					<li
+						className={`flex justify-between items-center text-4xl px-4 lg:px-0 hover:text-tertiarColor transition-opacity delay-300 duration-1000 ease-in ${
+							isMenuOpen
+								? "opacity-100"
+								: "opacity-0 ease-out duration-1000 delay-500"
+						}`}>
 						<SiLinkedin />
 					</li>
 				</a>
@@ -93,7 +101,12 @@ export default function Nav() {
 					href="/me"
 					className="cursor-pointer"
 					onClick={closeMenu}>
-					<li className="flex justify-between italic items-center px-4 lg:0 hover:text-tertiarColor">
+					<li
+						className={`flex justify-between items-center text-2xl italic px-4 lg:px-0 hover:text-tertiarColor transition-opacity delay-700 duration-1000 ease-in ${
+							isMenuOpen
+								? "opacity-100"
+								: "opacity-0 ease-out duration-1000 delay-300"
+						}`}>
 						me
 					</li>
 				</Link>
@@ -101,7 +114,12 @@ export default function Nav() {
 					href="/contact"
 					className="cursor-pointer"
 					onClick={closeMenu}>
-					<li className="bg-transparent text-white font-custom-font-logo py-2 px-2 cursor-pointer rounded-md items-center">
+					<li
+						className={`bg-transparent text-white font-custom-font-logo py-2 px-2 cursor-pointer rounded-md items-center transition-opacity delay-1000 duration-1000 ease-in ${
+							isMenuOpen
+								? "opacity-100"
+								: "opacity-0 ease-out duration-1000 delay-150"
+						}`}>
 						<button className="flex justify-center text-center border-2 border-tertiaryColor border-dotted border-opacity-60 text-white py-2 px-4 rounded-md hover:bg-transparent hover:text-secondairyColor whitespace-nowrap hover:blur-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mainColor">
 							te<span className="text-tertiarColor">x</span>
 							t me
