@@ -78,7 +78,7 @@ export default function Nav() {
 				className={`flex items-center text-mainColor text-lg md:text-xl lg:text-2xl lg:gap-10 transform transition-transform duration-1000 ease-in-out ${
 					isMenuOpen
 						? "bg-secondaryColor w-full absolute left-0 top-0 h-48 flex flex-row justify-center py-4 lg:py-4 gap-2 translate-y-0 delay-75"
-						: "bg-secondaryColor w-full absolute left-0 top-0 h-48 flex flex-row justify-center py-4 lg:py-4 gap-2 delay-700 translate-y-[-100%]"
+						: "bg-secondaryColor delay-700 translate-y-[-100%] md:translate-y-0 md:bg-transparent"
 				} lg:flex flex-row`}>
 				{/* Navigation Links */}
 
@@ -92,7 +92,7 @@ export default function Nav() {
 						className={`flex justify-between items-center text-4xl px-4 lg:px-0 hover:text-tertiarColor transition-opacity delay-300 duration-1000 ease-in ${
 							isMenuOpen
 								? "opacity-100"
-								: "opacity-0 ease-out duration-1000 delay-500"
+								: "opacity-0 ease-out duration-1000 delay-500 md:opacity-100"
 						}`}>
 						<SiLinkedin />
 					</li>
@@ -105,7 +105,7 @@ export default function Nav() {
 						className={`flex justify-between items-center text-2xl italic px-4 lg:px-0 hover:text-tertiarColor transition-opacity delay-700 duration-1000 ease-in ${
 							isMenuOpen
 								? "opacity-100"
-								: "opacity-0 ease-out duration-1000 delay-300"
+								: "opacity-0 ease-out duration-1000 delay-300 md:opacity-100"
 						}`}>
 						me
 					</li>
@@ -118,7 +118,7 @@ export default function Nav() {
 						className={`bg-transparent text-white font-custom-font-logo py-2 px-2 cursor-pointer rounded-md items-center transition-opacity delay-1000 duration-1000 ease-in ${
 							isMenuOpen
 								? "opacity-100"
-								: "opacity-0 ease-out duration-1000 delay-150"
+								: "opacity-0 ease-out duration-1000 delay-150 md:opacity-100"
 						}`}>
 						<button className="flex justify-center text-center border-2 border-tertiaryColor border-dotted border-opacity-60 text-white py-2 px-4 rounded-md hover:bg-transparent hover:text-secondairyColor whitespace-nowrap hover:blur-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mainColor">
 							te<span className="text-tertiarColor">x</span>
