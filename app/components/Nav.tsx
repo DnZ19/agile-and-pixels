@@ -78,7 +78,7 @@ export default function Nav() {
 				className={`flex items-center text-mainColor text-lg md:text-xl lg:text-2xl lg:gap-10 transform transition-transform duration-1000 ease-in-out ${
 					isMenuOpen
 						? "bg-secondaryColor w-full absolute left-0 top-0 h-48 flex flex-row justify-center py-4 lg:py-4 gap-2 translate-y-0 delay-75"
-						: "bg-secondaryColor w-full absolute sm:left-0 top-0 h-48 flex flex-row justify-center py-4 lg:py-4 gap-2 delay-700 translate-y-[-100%] md:translate-y-0 md:bg-transparent md:relative md:h-0 md:w-auto"
+						: "bg-secondaryColor w-full absolute sm:left-0 top-0 h-48 flex flex-row justify-center py-4 lg:py-4 gap-2 delay-700 translate-y-[-100%] md:translate-y-0 md:bg-transparent md:relative md:h-0 md:w-auto md:hidden"
 				} lg:flex flex-row`}>
 				{/* Navigation Links */}
 

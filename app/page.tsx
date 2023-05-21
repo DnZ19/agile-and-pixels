@@ -5,10 +5,13 @@ import React, { useState, useEffect } from "react";
 import { IoMdArrowDown } from "react-icons/io";
 import Image from "next/image";
 import Link from "next/link";
+import Cookie from "./components/Cookie";
 
 export default function Home() {
 	const [showServices, setShowServices] = useState(false);
 	const [showHero, setShowHero] = useState(true);
+
+	const [showCookie, setShowCookie] = useState(true);
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -27,10 +30,32 @@ export default function Home() {
 		return () => {
 			window.removeEventListener("scroll", handleScroll);
 		};
+
+		const consent = localStorage.getItem("cookieConsent");
+		if (consent === null) {
+			setShowCookie(true);
+		}
+	}, []);
+
+	const handleCookieConsent = () => {
+		localStorage.setItem("cookieConsent", "true");
+		setShowCookie(false);
+	};
+
+	useEffect(() => {
+		const consent = localStorage.getItem("cookieConsent");
+		if (consent === "true") {
+			setShowCookie(false);
+		} else {
+			setShowCookie(true);
+		}
 	}, []);
 
 	return (
 		<main className="h-full flex flex-col items-center max-w-custom px-2 mt-8 sm:mt-10 sm:w-full lg:h-auto lg:mt-44">
+			{showCookie && (
+				<Cookie onConsent={handleCookieConsent} />
+			)}
 			<div
 				className={`"transition-opacity duration-1000 ease-in-out delay-500 h-96 px-4 flex flex-col items-center sm:mt-8 md:mb-20 lg:mt-10 lg:w-full" ${
 					showHero ? "opacity-100" : "opacity-0"
@@ -71,7 +96,7 @@ export default function Home() {
 			</div>
 
 			<div
-				className={`transition-opacity duration-1000 ease-in-out bg-white bg-opacity-5 py-8 px-4 pb-20 rounded-md flex flex-col items-center justify-center gap-12 sm:w-full lg:border-2 lg:border-opacity-10 lg:border-secondairyColor mt-[-420px] lg:-[-180px] mb-4 ${
+				className={`transition-opacity duration-1000 ease-in-out bg-white bg-opacity-5 py-8 px-4 pb-20 rounded-md flex flex-col items-center justify-center gap-12 sm:w-full lg:border-2 lg:border-opacity-10 lg:border-secondairyColor mt-[-220px] lg:-[-180px] mb-4 ${
 					showServices ? "opacity-100" : "opacity-0"
 				}`}>
 				<h1 className="w-full text-center text-4xl lg:text-6xl text-slate-100 font-light font-custom-font-logo">
@@ -118,16 +143,6 @@ export default function Home() {
 						Connect
 					</button>
 				</Link>
-
-				{/* <div className="bg-cover w-auto mx-8 rounded-md mt-10 md:w-full md:p-4">
-					<Image
-						src="/pink_pollos_logo.png"
-						alt="waterlogo"
-						width={1000}
-						height={800}
-						className="rounded-md w-full"
-					/>
-				</div> */}
 			</div>
 		</main>
 	);
