@@ -15,15 +15,15 @@ export default function Team() {
 					me.
 				</h1>
 				<p className="max-w-8xl text-md md:text-4xl font-extralight text-justify lg:text-2xl lg:mt-10">
-					<div className="bg-cover w-800 md:float-left md:mr-6 mt-4 mb-8">
+					<span className="bg-cover w-800 md:float-left md:mr-6 mt-4 mb-8">
 						<Image
 							src="/rails.png"
 							alt="waterlogo"
 							width={500}
 							height={500}
-							className="w-full"
+							className="w-full mb-12 mt-12 md:mt-0 md:mb-0"
 						/>
-					</div>
+					</span>
 					I was born in Delft and raised in Utrecht, and
 					I've always had a knack for creativity and
 					adaptability. I understand that change can be
@@ -43,15 +43,15 @@ export default function Team() {
 					someone to initiate change, feel free to reach out
 					to me.
 					<br />
-					<div className="bg-cover w-800 md:hidden md:mr-6 mt-4 mb-4">
+					<span className="bg-cover w-800 md:hidden md:mr-6 mt-4 mb-4">
 						<Image
 							src="/lake.png"
 							alt="waterlogo"
 							width={500}
 							height={500}
-							className="w-full"
+							className="w-full mt-4 md:mt-0"
 						/>
-					</div>
+					</span>
 					<br />
 					Additionally, if you want a more hands on approach
 					and develop a team from an Agile or technical

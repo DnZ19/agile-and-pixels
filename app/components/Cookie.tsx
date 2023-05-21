@@ -59,7 +59,7 @@ export default function Cookie({ onConsent }: CookieType) {
 	const hideCookieBox = () => {
 		localStorage.setItem("cookieConsent", "true");
 		gsap.to("#cookie_box", {
-			y: -500,
+			y: -800,
 			opacity: 0,
 			duration: 0.5,
 			ease: "power1.out",
@@ -76,7 +76,7 @@ export default function Cookie({ onConsent }: CookieType) {
 	return (
 		<div
 			id="cookie_box"
-			className="fixed left-50% top-50% z-50 flex flex-col md:flex-row items-center justify-center bg-gradient-to-b from-gray-600 to-slate-900 rounded-md p-10 w-auto gap-12 overflow-hidden">
+			className="fixed left-50% top-50% mt-[-100px] z-50 flex flex-col md:flex-row items-center justify-center bg-gradient-to-b from-gray-600 to-slate-900 rounded-md p-10 w-auto gap-12 overflow-hidden">
 			<svg
 				id="total_cookie"
 				className="p-2 scale-50 md:scale-90"
