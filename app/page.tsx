@@ -3,7 +3,7 @@
 import Services from "./components/Services";
 import React, { useState, useEffect } from "react";
 import { IoMdArrowDown } from "react-icons/io";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 import Cookie from "./components/Cookie";
 

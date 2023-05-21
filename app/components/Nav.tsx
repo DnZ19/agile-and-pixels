@@ -2,9 +2,17 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { SiLinkedin } from "react-icons/all";
+import { SiLinkedin } from "react-icons/si";
+import { gsap } from "gsap";
 
 export default function Nav() {
+	const tl = gsap.timeline({
+		defaults: {
+			duration: 0.35,
+			ease: "power2.easeOut",
+		},
+	});
+
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	const toggleMenu = () => {
@@ -13,6 +21,36 @@ export default function Nav() {
 
 	const closeMenu = () => {
 		setIsMenuOpen(false);
+	};
+
+	gsap.set("#left-feather", {
+		scale: 0,
+		transformOrigin: "center",
+	});
+	gsap.set("#right-feather", {
+		scale: 0,
+		transformOrigin: "center",
+	});
+
+	const home = () => {
+		gsap.fromTo(
+			"#home-svg",
+			{ scale: 1 },
+			{ scale: 0.9, yoyo: true, repeat: 1 }
+		);
+		gsap.fromTo(
+			"#left-feather",
+			{ y: -5, scale: 0 },
+			{ y: 20, scale: 1.5, duration: 2 }
+		);
+		gsap.fromTo(
+			"#right-feather",
+			{ y: -5, scale: 0 },
+			{ y: 20, scale: 1.5, duration: 1 }
+		);
+
+		gsap.fromTo("#right-feather", { x: 0 }, { x: 5 });
+		closeMenu();
 	};
 
 	return (
@@ -82,6 +120,49 @@ export default function Nav() {
 				} lg:flex flex-row`}>
 				{/* Navigation Links */}
 
+				<Link
+					href="/"
+					className="cursor-pointer"
+					onClick={home}>
+					<li
+						className={`flex justify-between items-center text-2xl italic px-2 pb-2 lg:px-0 hover:text-tertiarColor transition-opacity delay-700 duration-1000 ease-in ${
+							isMenuOpen
+								? "opacity-100"
+								: "opacity-0 ease-out duration-1000 delay-300 md:opacity-100"
+						}`}>
+						<svg
+							id="home-svg"
+							width="43"
+							height="43"
+							viewBox="0 0 43 43"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<g clip-path="url(#clip0_48_12)">
+								<path
+									d="M35.6667 25.3372L32.0833 43.4384H10.5833L7 25.3372L21.3333 12L35.6667 25.3372ZM23.125 36.2717C23.125 35.2827 22.3223 34.48 21.3333 34.48C20.3443 34.48 19.5417 35.2827 19.5417 36.2717C19.5417 37.2607 20.3443 38.0634 21.3333 38.0634C22.3223 38.0634 23.125 37.2607 23.125 36.2717ZM24.9167 27.3134C24.9167 25.3336 23.3113 23.73 21.3333 23.73C19.3553 23.73 17.75 25.3336 17.75 27.3134C17.75 29.2932 19.3553 30.8967 21.3333 30.8967C23.3113 30.8967 24.9167 29.2932 24.9167 27.3134Z"
+									fill="white"
+									id="house"
+								/>
+								<path
+									d="M40.5615 24.5983L43 21.9735L21.5 2L0 21.9466L2.43846 24.5714L21.5 6.89125L40.5615 24.5983Z"
+									fill="white"
+									id="roof"
+								/>
+								<path
+									d="M17.9348 27.7602C19.853 28.0433 24.4903 28.4395 26.569 27.3798L26.5362 27.1464C25.9127 27.5201 24.8348 27.7425 24.2349 27.7078C23.5709 26.5062 22.5195 25.9994 21.1388 26.0008C20.3967 26.0015 20.0267 26.3267 19.3043 26.4966C18.4519 26.6971 17.6208 26.2382 17.1033 26.9249C16.7954 27.3336 16.3937 27.8013 16.2334 28.3563C17.4839 27.9968 18.3635 28.7398 19.8639 29.6312C22.0715 30.9426 24.0877 29.7852 24.4008 28.0415C22.7824 28.2473 18.7308 28.254 17.9348 27.7602Z"
+									fill="#f48c06"
+									id="left-feather"
+								/>
+								<path
+									d="M24.2067 27.203C22.2762 27.0206 17.6245 26.8676 15.6042 28.0347L15.6491 28.2661C16.2522 27.8602 17.317 27.5817 17.9179 27.585C18.6439 28.7502 19.7204 29.2012 21.0991 29.1276C21.8402 29.0881 22.1926 28.744 22.9051 28.5365C23.7458 28.2916 24.5998 28.7064 25.0807 27.9935C25.3668 27.5693 25.7435 27.0812 25.8745 26.5186C24.6445 26.943 23.7272 26.2471 22.1823 25.4354C19.909 24.2414 17.9562 25.5027 17.7347 27.2604C19.3402 26.9702 23.3858 26.7514 24.2067 27.203Z"
+									fill="#f48c06"
+									id="right-feather"
+								/>
+							</g>
+						</svg>
+					</li>
+				</Link>
+
 				<a
 					href="https://www.linkedin.com/in/dennisrijkers/"
 					target="_blank"
@@ -89,7 +170,7 @@ export default function Nav() {
 					className="cursor-pointer"
 					onClick={closeMenu}>
 					<li
-						className={`flex justify-between items-center text-4xl px-4 lg:px-0 hover:text-tertiarColor transition-opacity delay-300 duration-1000 ease-in ${
+						className={`flex justify-between items-center text-4xl px-2 lg:px-0 hover:text-tertiarColor transition-opacity delay-300 duration-1000 ease-in ${
 							isMenuOpen
 								? "opacity-100"
 								: "opacity-0 ease-out duration-1000 delay-500 md:opacity-100"
