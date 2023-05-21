@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { SiLinkedin } from "react-icons/si";
 import { gsap } from "gsap";
@@ -22,6 +22,17 @@ export default function Nav() {
 	const closeMenu = () => {
 		setIsMenuOpen(false);
 	};
+
+	useEffect(() => {
+		gsap.set("#left-feather", {
+			scale: 0,
+			transformOrigin: "center",
+		});
+		gsap.set("#right-feather", {
+			scale: 0,
+			transformOrigin: "center",
+		});
+	}, []);
 
 	gsap.set("#left-feather", {
 		scale: 0,
