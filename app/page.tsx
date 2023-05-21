@@ -11,7 +11,16 @@ export default function Home() {
 	const [showServices, setShowServices] = useState(false);
 	const [showHero, setShowHero] = useState(true);
 
-	const [showCookie, setShowCookie] = useState(true);
+	const [showCookie, setShowCookie] = useState(false);
+
+	useEffect(() => {
+		const consent = localStorage.getItem("cookieConsent");
+		if (consent === "true") {
+			setShowCookie(false);
+		} else {
+			setShowCookie(true);
+		}
+	}, []);
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -30,11 +39,6 @@ export default function Home() {
 		return () => {
 			window.removeEventListener("scroll", handleScroll);
 		};
-
-		const consent = localStorage.getItem("cookieConsent");
-		if (consent === null) {
-			setShowCookie(true);
-		}
 	}, []);
 
 	const handleCookieConsent = () => {
@@ -42,20 +46,12 @@ export default function Home() {
 		setShowCookie(false);
 	};
 
-	useEffect(() => {
-		const consent = localStorage.getItem("cookieConsent");
-		if (consent === "true") {
-			setShowCookie(false);
-		} else {
-			setShowCookie(true);
-		}
-	}, []);
-
 	return (
 		<main className="h-full flex flex-col items-center max-w-custom px-2 mt-8 sm:mt-10 sm:w-full lg:h-auto lg:mt-44">
 			{showCookie && (
 				<Cookie onConsent={handleCookieConsent} />
 			)}
+
 			<div
 				className={`"transition-opacity duration-1000 ease-in-out delay-500 h-96 px-4 flex flex-col items-center sm:mt-8 md:mb-20 lg:mt-10 lg:w-full" ${
 					showHero ? "opacity-100" : "opacity-0"

@@ -5,13 +5,6 @@ import { CookieType } from "@/types/CookieType";
 export default function Cookie({ onConsent }: CookieType) {
 	const [showCookieBox, setShowCookieBox] = useState(false);
 
-	useEffect(() => {
-		const consent = localStorage.getItem("cookieConsent");
-		if (consent === null) {
-			setShowCookieBox(true);
-		}
-	}, []);
-
 	const tl = gsap.timeline({
 		defaults: {
 			duration: 0.1,
@@ -74,12 +67,16 @@ export default function Cookie({ onConsent }: CookieType) {
 		setTimeout(() => {
 			setShowCookieBox(false);
 		}, 500);
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
 	};
 
 	return (
 		<div
 			id="cookie_box"
-			className="absolute left-50% top-50% z-50 flex flex-col md:flex-row items-center justify-center bg-gradient-to-b from-gray-600 to-slate-900 rounded-md p-10 w-auto gap-12 overflow-hidden">
+			className="fixed left-50% top-50% z-50 flex flex-col md:flex-row items-center justify-center bg-gradient-to-b from-gray-600 to-slate-900 rounded-md p-10 w-auto gap-12 overflow-hidden">
 			<svg
 				id="total_cookie"
 				className="p-2 scale-50 md:scale-90"
