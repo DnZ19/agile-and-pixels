@@ -34,15 +34,6 @@ export default function Nav() {
 		});
 	}, []);
 
-	gsap.set("#left-feather", {
-		scale: 0,
-		transformOrigin: "center",
-	});
-	gsap.set("#right-feather", {
-		scale: 0,
-		transformOrigin: "center",
-	});
-
 	const home = () => {
 		gsap.fromTo(
 			"#home-svg",
