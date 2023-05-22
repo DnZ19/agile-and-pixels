@@ -80,13 +80,13 @@ export default function Nav() {
 					className={`top-0 right-0 text-mainColor p-2 rounded-md focus:outline-none mt-8 z-50`}
 					onClick={toggleMenu}>
 					<svg
-						className={`h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10 ${
+						className={`h-10 w-10 md:h-8 md:w-8 lg:h-10 lg:w-10 ${
 							isMenuOpen
 								? "opacity-0"
 								: "opacity-100 ease-in duration-1000 delay-700"
 						}`}
 						fill="none"
-						viewBox="0 0 24 24"
+						viewBox="0 0 28 28"
 						stroke="currentColor">
 						<path
 							strokeLinecap="round"
@@ -102,7 +102,7 @@ export default function Nav() {
 								: "opacity-0 absolute"
 						}`}
 						fill="none"
-						viewBox="0 0 24 24"
+						viewBox="0 0 28 28"
 						stroke="currentColor">
 						<path
 							strokeLinecap="round"
@@ -149,6 +149,7 @@ export default function Nav() {
 									d="M40.5615 24.5983L43 21.9735L21.5 2L0 21.9466L2.43846 24.5714L21.5 6.89125L40.5615 24.5983Z"
 									fill="white"
 									id="roof"
+									className="hover:fill-tertiaryColor"
 								/>
 								<path
 									d="M17.9348 27.7602C19.853 28.0433 24.4903 28.4395 26.569 27.3798L26.5362 27.1464C25.9127 27.5201 24.8348 27.7425 24.2349 27.7078C23.5709 26.5062 22.5195 25.9994 21.1388 26.0008C20.3967 26.0015 20.0267 26.3267 19.3043 26.4966C18.4519 26.6971 17.6208 26.2382 17.1033 26.9249C16.7954 27.3336 16.3937 27.8013 16.2334 28.3563C17.4839 27.9968 18.3635 28.7398 19.8639 29.6312C22.0715 30.9426 24.0877 29.7852 24.4008 28.0415C22.7824 28.2473 18.7308 28.254 17.9348 27.7602Z"

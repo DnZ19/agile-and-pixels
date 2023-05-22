@@ -43,6 +43,11 @@ module.exports = {
 				secondaryColor: "#1b263b",
 				tertiaryColor: "#e0e1dd",
 			},
+			fill: {
+				mainBgColor: "#0f0f0f",
+				secondaryColor: "#1b263b",
+				tertiaryColor: "#f48c06",
+			},
 			borderColor: {
 				mainColor: "#778da9",
 				secondairyColor: "#415a77",
