@@ -56,7 +56,7 @@ export default function Home() {
 
 			<div
 				className={`"transition-opacity duration-1000 ease-in-out delay-500 h-96 px-4 flex flex-col items-center sm:mt-8 md:mb-20 lg:mt-10 lg:w-full" ${
-					showHero ? "opacity-100" : "opacity-0"
+					showHero ? "opacity-100 z-40" : "opacity-0"
 				}`}>
 				{/* <Image
 					src="/backgroundImage.svg"

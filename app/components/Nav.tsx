@@ -6,13 +6,6 @@ import { SiLinkedin } from "react-icons/si";
 import { gsap } from "gsap";
 
 export default function Nav() {
-	const tl = gsap.timeline({
-		defaults: {
-			duration: 0.35,
-			ease: "power2.easeOut",
-		},
-	});
-
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	const toggleMenu = () => {
@@ -28,6 +21,7 @@ export default function Nav() {
 			scale: 0,
 			transformOrigin: "center",
 		});
+
 		gsap.set("#right-feather", {
 			scale: 0,
 			transformOrigin: "center",
@@ -35,23 +29,34 @@ export default function Nav() {
 	}, []);
 
 	const home = () => {
-		gsap.fromTo(
-			"#home-svg",
-			{ scale: 1 },
-			{ scale: 0.9, yoyo: true, repeat: 1 }
-		);
-		gsap.fromTo(
-			"#left-feather",
-			{ y: -5, scale: 0 },
-			{ y: 20, scale: 1.5, duration: 2 }
-		);
-		gsap.fromTo(
-			"#right-feather",
-			{ y: -5, scale: 0 },
-			{ y: 20, scale: 1.5, duration: 1 }
-		);
+		const tl = gsap.timeline({
+			defaults: {
+				duration: 0.35,
+				ease: "power2.easeOut",
+			},
+		});
 
-		gsap.fromTo("#right-feather", { x: 0 }, { x: 5 });
+		tl.to("#home-svg", {
+			scale: 0.9,
+			yoyo: true,
+			repeat: 1,
+		});
+
+		tl.to("#left-feather", {
+			y: 20,
+			scale: 1.5,
+			autoAlpha: 1,
+			duration: 2,
+		});
+
+		tl.to("#right-feather", {
+			y: 20,
+			scale: 1.5,
+			autoAlpha: 1,
+			duration: 1,
+		});
+
+		tl.to("#right-feather", { x: 5 });
 		closeMenu();
 	};
 
@@ -139,7 +144,7 @@ export default function Nav() {
 							viewBox="0 0 43 43"
 							fill="none"
 							xmlns="http://www.w3.org/2000/svg">
-							<g clip-path="url(#clip0_48_12)">
+							<g>
 								<path
 									d="M35.6667 25.3372L32.0833 43.4384H10.5833L7 25.3372L21.3333 12L35.6667 25.3372ZM23.125 36.2717C23.125 35.2827 22.3223 34.48 21.3333 34.48C20.3443 34.48 19.5417 35.2827 19.5417 36.2717C19.5417 37.2607 20.3443 38.0634 21.3333 38.0634C22.3223 38.0634 23.125 37.2607 23.125 36.2717ZM24.9167 27.3134C24.9167 25.3336 23.3113 23.73 21.3333 23.73C19.3553 23.73 17.75 25.3336 17.75 27.3134C17.75 29.2932 19.3553 30.8967 21.3333 30.8967C23.3113 30.8967 24.9167 29.2932 24.9167 27.3134Z"
 									fill="white"

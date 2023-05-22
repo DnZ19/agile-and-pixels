@@ -2,9 +2,9 @@ import Head from "next/head";
 import "./globals.css";
 import Nav from "./components/Nav";
 import Bottom from "./components/Bottom";
-// import { getServerSession } from "next-auth";
+import { getServerSession } from "next-auth";
 
-// import { authOptions } from '@/pages/api/auth/[...nextauth]'
+import authOptions from "@/pages/api/auth/[...nextauth]";
 
 export const metadata = {
 	title: "Agile & Pixels",
@@ -16,28 +16,30 @@ export default async function RootLayout({
 }: {
 	children: React.ReactNode;
 }) {
-	// const session = await getServerSession(authOptions)
+	const session = await getServerSession(authOptions);
 
 	return (
-		<html lang="en">
-			<Head>
-				<meta
-					name="viewport"
-					content="width=device-width, initial-scale=1.0"
-				/>
-				<meta
-					name="description"
-					content={metadata.description}
-				/>
-				<title>{metadata.title}</title>
-				{/* Add other head tags like styles, scripts, etc. here */}
-				<link rel="icon" href="/favicon.ico" as="style" />
-			</Head>
-			<body className="bg-mainBgColor flex flex-col items-center min-h-screen">
-				<Nav />
-				{children}
-				<Bottom />
-			</body>
-		</html>
+		<>
+			<html>
+				<Head>
+					<meta
+						name="viewport"
+						content="width=device-width, initial-scale=1.0"
+					/>
+					<meta
+						name="description"
+						content={metadata.description}
+					/>
+					<title>{metadata.title}</title>
+					{/* Add other head tags like styles, scripts, etc. here */}
+					<link rel="icon" href="/favicon.ico" />
+				</Head>
+				<body className="bg-mainBgColor flex flex-col items-center min-h-screen">
+					<Nav />
+					{children}
+					<Bottom />
+				</body>
+			</html>
+		</>
 	);
 }
