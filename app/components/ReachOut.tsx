@@ -7,9 +7,9 @@ import { gsap } from "gsap";
 export default function ReachtOut() {
 	const [state, handleSubmit] = useForm("xnqywveb");
 	const tl = gsap.timeline({ defaults: { duration: 1 } });
-	const [name, setName] = useState(false);
-	const [email, setEmail] = useState(false);
-	const [number, setNumber] = useState(false);
+	const [name, setName] = useState("");
+	const [email, setEmail] = useState("");
+	const [number, setNumber] = useState("");
 
 	const start =
 		"M0 0.999512C0 0.999512 60.5 0.999512 150 0.999512C239.5 0.999512 250 0.999512 250 0.999512";
