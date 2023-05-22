@@ -2,7 +2,7 @@ import Head from "next/head";
 import "./globals.css";
 import Nav from "./components/Nav";
 import Bottom from "./components/Bottom";
-import { getServerSession } from "next-auth";
+//import { getServerSession } from "next-auth";
 
 import authOptions from "@/pages/api/auth/[...nextauth]";
 
@@ -16,7 +16,7 @@ export default async function RootLayout({
 }: {
 	children: React.ReactNode;
 }) {
-	const session = await getServerSession(authOptions);
+	//const session = await getServerSession(authOptions);
 
 	return (
 		<>

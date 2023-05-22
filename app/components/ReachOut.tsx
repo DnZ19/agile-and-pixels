@@ -1,5 +1,3 @@
-"use client";
-
 import { useForm, ValidationError } from "@formspree/react";
 import React, { useEffect, useState } from "react";
 import { gsap } from "gsap";
