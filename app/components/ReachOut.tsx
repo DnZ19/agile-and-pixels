@@ -5,9 +5,9 @@ import { gsap } from "gsap";
 export default function ReachtOut() {
 	const [state, handleSubmit] = useForm("xnqywveb");
 	const tl = gsap.timeline({ defaults: { duration: 1 } });
-	const [name, setName] = useState("");
-	const [email, setEmail] = useState("");
-	const [number, setNumber] = useState("");
+	// const [name, setName] = useState("");
+	// const [email, setEmail] = useState("");
+	// const [number, setNumber] = useState("");
 
 	const start =
 		"M0 0.999512C0 0.999512 60.5 0.999512 150 0.999512C239.5 0.999512 250 0.999512 250 0.999512";
@@ -76,17 +76,17 @@ export default function ReachtOut() {
 
 	const handleNameFocus = () => {
 		handleFocus("elastic-line-name", "placeholderName");
-		setName(true);
+		//setName(true);
 	};
 
 	const handleEmailFocus = () => {
 		handleFocus("elastic-line-email", "placeholderEmail");
-		setEmail(true);
+		//setEmail(true);
 	};
 
 	const handleNumberFocus = () => {
 		handleFocus("elastic-line-number", "placeholderNumber");
-		setNumber(true);
+		//setNumber(true);
 	};
 
 	const containers = useEffect(() => {
