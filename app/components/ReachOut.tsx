@@ -1,5 +1,9 @@
 import { useForm, ValidationError } from "@formspree/react";
-import React, { useEffect, useState } from "react";
+import React, {
+	useCallback,
+	useEffect,
+	useState,
+} from "react";
 import { gsap } from "gsap";
 
 export default function ReachtOut() {
@@ -55,27 +59,20 @@ export default function ReachtOut() {
 	const tl2 = gsap.timeline({
 		defaults: { duration: 0.5, ease: "Power2.easeOut" },
 	});
-	const tickMarkPathSelector = "#tick-mark path";
-	const tickMarkPathElement = document.querySelector(
-		tickMarkPathSelector
-	) as SVGPathElement;
-	let pathLength = 0;
-	if (tickMarkPathElement) {
-		pathLength = tickMarkPathElement.getTotalLength();
-	}
 
-	// gsap.set("#tick-mark", { opacity: 0 });
+	const clickHandler = useCallback(() => {
+		setChecked((prevChecked) => !prevChecked); // Use functional form of setState
+		const tickMarkPathSelector = "#tick-mark path";
+		const tickMarkPathElement = document.querySelector(
+			tickMarkPathSelector
+		) as SVGPathElement;
+		let pathLength = 0;
+		if (tickMarkPathElement) {
+			pathLength = tickMarkPathElement.getTotalLength();
+		}
 
-	gsap.set("#tick-mark", {
-		strokeDashoffset: pathLength,
-		strokeDasharray: pathLength,
-	});
-
-	//checkbox cheched
-
-	const clickHandler = () => {
-		setChecked(!checked);
-		if (checked) {
+		if (!checked) {
+			// Invert the condition since state hasn't been updated yet
 			tl2.to("#checkbox_fill", { top: "0" });
 			tl2.fromTo(
 				tickMarkPathElement,
@@ -83,7 +80,7 @@ export default function ReachtOut() {
 				{ strokeDashoffset: 0 },
 				"<50%"
 			);
-			tl.to("#checkbox_label", { color: "#6391E8" }, "<");
+			tl2.to("#checkbox_label", { color: "#6391E8" }, "<");
 		} else {
 			tl2.to("#checkbox_fill", { top: "100%" });
 			tl2.fromTo(
@@ -91,9 +88,25 @@ export default function ReachtOut() {
 				{ strokeDashoffset: 0 },
 				{ strokeDashoffset: pathLength }
 			);
-			tl.to("#checkbox_label", { color: "white" }, "<");
+			tl2.to("#checkbox_label", { color: "white" }, "<");
 		}
-	};
+	}, [checked]); // Specify checked as the dependency
+
+	useEffect(() => {
+		const tickMarkPathSelector = "#tick-mark path";
+		const tickMarkPathElement = document.querySelector(
+			tickMarkPathSelector
+		) as SVGPathElement;
+		let pathLength = 0;
+		if (tickMarkPathElement) {
+			pathLength = tickMarkPathElement.getTotalLength();
+		}
+
+		gsap.set("#tick-mark", {
+			strokeDashoffset: pathLength,
+			strokeDasharray: pathLength,
+		});
+	}, []);
 
 	//revert back not focussed
 
