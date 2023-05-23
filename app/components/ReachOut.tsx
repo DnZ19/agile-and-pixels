@@ -71,15 +71,27 @@ export default function ReachtOut() {
 		strokeDasharray: pathLength,
 	});
 
+	//checkbox cheched
+
 	const clickHandler = () => {
-		setChecked(true);
+		setChecked(!checked);
 		if (checked) {
 			tl2.to("#checkbox_fill", { top: "0" });
 			tl2.fromTo(
 				tickMarkPathElement,
 				{ strokeDashoffset: pathLength },
-				{ strokeDashoffset: 0 }
+				{ strokeDashoffset: 0 },
+				"<50%"
 			);
+			tl.to("#checkbox_label", { color: "#6391E8" }, "<");
+		} else {
+			tl2.to("#checkbox_fill", { top: "100%" });
+			tl2.fromTo(
+				tickMarkPathElement,
+				{ strokeDashoffset: 0 },
+				{ strokeDashoffset: pathLength }
+			);
+			tl.to("#checkbox_label", { color: "white" }, "<");
 		}
 	};
 
@@ -364,7 +376,7 @@ export default function ReachtOut() {
 						<input
 							id="checkbox"
 							type="checkbox"
-							className="absolute bottom-0 left-0 w-full h-full border-2 border-white rounded-sm opacity-0 cursor-pointer"
+							className="absolute bottom-0 left-0 w-full h-full border-2 opacity-0 cursor-pointer z-50"
 							onClick={clickHandler}
 						/>
 						<svg
