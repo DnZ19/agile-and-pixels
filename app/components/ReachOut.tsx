@@ -6,8 +6,9 @@ export default function ReachtOut() {
 	const [state, handleSubmit] = useForm("xnqywveb");
 	const tl = gsap.timeline({ defaults: { duration: 1 } });
 
-	//here I am....
-	const line = "#line-svg #elastic-line-name";
+	const nameLine = "#elastic-line-name";
+	const emailLine = "#elastic-line-email";
+	const phoneLine = "#elastic-line-number";
 
 	const start =
 		"M0 0.999512C0 0.999512 60.5 0.999512 150 0.999512C239.5 0.999512 250 0.999512 250 0.999512";
@@ -73,21 +74,7 @@ export default function ReachtOut() {
 				ease: "Power2.easeOut",
 			});
 		}
-
-		if (event.target.type === "text") {
-			let inputText = event.target.value;
-			if (inputText.length > 2) {
-				colorize("#6391E8", line);
-			}
-		}
 	};
-
-	function colorize(color: string, lineSelector: string) {
-		gsap.to(lineSelector, {
-			stroke: color,
-			duration: 0.75,
-		});
-	}
 
 	const handleNameFocus = () => {
 		handleFocus("elastic-line-name", "placeholderName");
@@ -99,6 +86,58 @@ export default function ReachtOut() {
 
 	const handleNumberFocus = () => {
 		handleFocus("elastic-line-number", "placeholderNumber");
+	};
+
+	function colorize(color: string, lineSelector: string) {
+		gsap.fromTo(
+			lineSelector,
+			{
+				stroke: "#D1D4DA",
+			},
+			{
+				stroke: color,
+				duration: 0.25,
+			}
+		);
+	}
+
+	const handleNameChange = (
+		event: React.ChangeEvent<HTMLInputElement>,
+		nameLine: string
+	) => {
+		let valid = false;
+		if (
+			event.target.type === "text" &&
+			event.target.value.length > 2
+		) {
+			valid = true;
+		}
+
+		colorize(valid ? "#6391E8" : "#FE8C99", nameLine);
+	};
+
+	const handleEmailChange = (
+		event: React.ChangeEvent<HTMLInputElement>,
+		emailLine: string
+	) => {
+		let valid = false;
+		if (event.target.type === "email") {
+			valid = validateEmail(event.target.value);
+		}
+
+		colorize(valid ? "#6391E8" : "#FE8C99", emailLine);
+	};
+
+	const handlePhoneChange = (
+		event: React.ChangeEvent<HTMLInputElement>,
+		phoneLine: string
+	) => {
+		let valid = false;
+		if (event.target.type === "text") {
+			valid = validatePhone(event.target.value);
+		}
+
+		colorize(valid ? "#6391E8" : "#FE8C99", phoneLine);
 	};
 
 	const containers = useEffect(() => {
@@ -122,16 +161,19 @@ export default function ReachtOut() {
 		);
 	}
 
-	// function validateEmail(email) {
-	// 	let re = /\S+@\S+\.\S+/;
-	// 	return re.test(email);
-	// }
+	function validateEmail(email: string) {
+		let re = /\S+@\S+\.\S+/;
+		return re.test(email);
+	}
 
-	// function validatePhone(phone) {
-	// 	let re =
-	// 		/^(\+1)?\s?\(?[0-9]{3}\)?[-. ]?[0-9]{3}[-. ]?[0-9]{4}$/;
-	// 	return re.test(phone);
-	// }
+	function validatePhone(phone: string) {
+		// Remove any non-digit characters from the phone number
+		const cleanedPhone = phone.replace(/\D/g, "");
+
+		// Validate the cleaned phone number
+		let re = /^[0-9]{10}$/; // Assumes a 10-digit phone number format
+		return re.test(cleanedPhone);
+	}
 
 	return (
 		<div className="flex flex-col items-center md:items-start md:flex-row gap-16">
@@ -163,7 +205,10 @@ export default function ReachtOut() {
 						name="name"
 						autoComplete="off"
 						id="name"
-						onBlur={(event) => handleBlur(event, line)}
+						onBlur={(event) => handleBlur(event, nameLine)}
+						onChange={(event) =>
+							handleNameChange(event, nameLine)
+						}
 						className="bg-transparent border-none f h-full w-full absolute top-0 focus:outline-none text-tertiarColor text-sm"
 					/>
 					<svg
@@ -193,11 +238,14 @@ export default function ReachtOut() {
 						Your Email
 					</p>
 					<input
-						type="text"
+						type="email"
 						name="email"
 						autoComplete="off"
 						id="email"
-						onBlur={(event) => handleBlur(event, line)}
+						onBlur={(event) => handleBlur(event, emailLine)}
+						onChange={(event) =>
+							handleEmailChange(event, emailLine)
+						}
 						className="bg-transparent border-none h-full w-full absolute top-0 focus:outline-none  text-tertiarColor text-sm"
 					/>
 					<svg
@@ -227,11 +275,14 @@ export default function ReachtOut() {
 						Your Phone Number
 					</p>
 					<input
-						type="text"
+						type="phone"
 						name="number"
 						autoComplete="off"
 						id="number"
-						onBlur={(event) => handleBlur(event, line)}
+						onBlur={(event) => handleBlur(event, phoneLine)}
+						onChange={(event) =>
+							handlePhoneChange(event, phoneLine)
+						}
 						className="bg-transparent border-none h-full w-full absolute top-0 focus:outline-none  text-tertiarColor text-sm"
 					/>
 					<svg
