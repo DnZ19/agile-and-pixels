@@ -49,7 +49,7 @@ export default function Home() {
 	};
 
 	return (
-		<main className="h-full flex flex-col items-center max-w-custom px-2 mt-8 sm:mt-10 sm:w-full lg:h-auto lg:mt-44">
+		<main className="h-full flex flex-col items-center max-w-custom px-2 mt-8 sm:mt-10 sm:w-full lg:h-auto lg:mt-44 overflow-x-hidden">
 			{showCookie && (
 				<Cookie onConsent={handleCookieConsent} />
 			)}
