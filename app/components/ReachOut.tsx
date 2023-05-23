@@ -5,9 +5,9 @@ import { gsap } from "gsap";
 export default function ReachtOut() {
 	const [state, handleSubmit] = useForm("xnqywveb");
 	const tl = gsap.timeline({ defaults: { duration: 1 } });
-	// const [name, setName] = useState("");
-	// const [email, setEmail] = useState("");
-	// const [number, setNumber] = useState("");
+
+	//here I am....
+	const line = "#line-svg #elastic-line-name";
 
 	const start =
 		"M0 0.999512C0 0.999512 60.5 0.999512 150 0.999512C239.5 0.999512 250 0.999512 250 0.999512";
@@ -52,7 +52,8 @@ export default function ReachtOut() {
 	//revert back not focussed
 
 	const handleBlur = (
-		event: React.FocusEvent<HTMLInputElement>
+		event: React.FocusEvent<HTMLInputElement>,
+		line: string
 	) => {
 		const id = `elastic-line-${event.target.name}`;
 		const placeholderId = `placeholder${
@@ -72,21 +73,32 @@ export default function ReachtOut() {
 				ease: "Power2.easeOut",
 			});
 		}
+
+		if (event.target.type === "text") {
+			let inputText = event.target.value;
+			if (inputText.length > 2) {
+				colorize("#6391E8", line);
+			}
+		}
 	};
+
+	function colorize(color: string, lineSelector: string) {
+		gsap.to(lineSelector, {
+			stroke: color,
+			duration: 0.75,
+		});
+	}
 
 	const handleNameFocus = () => {
 		handleFocus("elastic-line-name", "placeholderName");
-		//setName(true);
 	};
 
 	const handleEmailFocus = () => {
 		handleFocus("elastic-line-email", "placeholderEmail");
-		//setEmail(true);
 	};
 
 	const handleNumberFocus = () => {
 		handleFocus("elastic-line-number", "placeholderNumber");
-		//setNumber(true);
 	};
 
 	const containers = useEffect(() => {
@@ -110,12 +122,30 @@ export default function ReachtOut() {
 		);
 	}
 
+	// function validateEmail(email) {
+	// 	let re = /\S+@\S+\.\S+/;
+	// 	return re.test(email);
+	// }
+
+	// function validatePhone(phone) {
+	// 	let re =
+	// 		/^(\+1)?\s?\(?[0-9]{3}\)?[-. ]?[0-9]{3}[-. ]?[0-9]{4}$/;
+	// 	return re.test(phone);
+	// }
+
 	return (
-		<div>
-			<h1 className="text-4xl md:text-6xl xl:text-6xl md:mt-12 xl:mt-16 mb-16 text-center">
-				Let's get in touch
-				<span className="text-secondairyColor">...</span>
-			</h1>
+		<div className="flex flex-col items-center md:items-start md:flex-row gap-16">
+			<div className="flex flex-col justify-center items-center md:items-start md:justify-normal w-[250px] md:w-[300px]">
+				<h1 className="text-4xl mt-12 w-48 md:text-6xl xl:text-6xl md:mt-4 mb-16 text-center md:text-start">
+					Let's get in touch
+					<span className="text-secondairyColor">...</span>
+				</h1>
+				<p className="text-justify w-auto md:w-80">
+					Hey there! Let's get in touch and let me know what
+					you're looking for.
+				</p>
+			</div>
+
 			<form
 				onSubmit={handleSubmit}
 				className="w-80 max-w-sm mx-auto space-y-3 p-8 flex flex-col justify-between gap-4">
@@ -133,7 +163,7 @@ export default function ReachtOut() {
 						name="name"
 						autoComplete="off"
 						id="name"
-						onBlur={handleBlur}
+						onBlur={(event) => handleBlur(event, line)}
 						className="bg-transparent border-none f h-full w-full absolute top-0 focus:outline-none text-tertiarColor text-sm"
 					/>
 					<svg
@@ -167,7 +197,7 @@ export default function ReachtOut() {
 						name="email"
 						autoComplete="off"
 						id="email"
-						onBlur={handleBlur}
+						onBlur={(event) => handleBlur(event, line)}
 						className="bg-transparent border-none h-full w-full absolute top-0 focus:outline-none  text-tertiarColor text-sm"
 					/>
 					<svg
@@ -201,7 +231,7 @@ export default function ReachtOut() {
 						name="number"
 						autoComplete="off"
 						id="number"
-						onBlur={handleBlur}
+						onBlur={(event) => handleBlur(event, line)}
 						className="bg-transparent border-none h-full w-full absolute top-0 focus:outline-none  text-tertiarColor text-sm"
 					/>
 					<svg
@@ -278,7 +308,7 @@ export default function ReachtOut() {
 				<button
 					type="submit"
 					disabled={state.submitting}
-					className="w-auto px-3 py-2 text-buttonText placeholder-slate-900 bg-tertiaryColor rounded-sm focus:outline-none focus:ring-slate-500 focus:border-slate-100 sm:text-sm lg:text-lg lg:font-semibold hover:bg-transparent hover:border-1 hover:text-tertiarColor">
+					className="w-[250px] px-3 py-2 text-buttonText placeholder-slate-900 bg-tertiaryColor rounded-sm focus:outline-none focus:ring-slate-500 focus:border-slate-100 sm:text-sm lg:text-lg lg:font-semibold hover:bg-transparent hover:border-1 hover:text-tertiarColor">
 					Submit
 				</button>
 			</form>
