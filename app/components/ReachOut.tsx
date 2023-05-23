@@ -9,6 +9,8 @@ export default function ReachtOut() {
 	const nameLine = "#elastic-line-name";
 	const emailLine = "#elastic-line-email";
 	const phoneLine = "#elastic-line-number";
+	const checkbox = "#checkbox";
+	const [checked, setChecked] = useState(false);
 
 	const start =
 		"M0 0.999512C0 0.999512 60.5 0.999512 150 0.999512C239.5 0.999512 250 0.999512 250 0.999512";
@@ -48,6 +50,37 @@ export default function ReachtOut() {
 			},
 			"<15%"
 		);
+	};
+
+	const tl2 = gsap.timeline({
+		defaults: { duration: 0.5, ease: "Power2.easeOut" },
+	});
+	const tickMarkPathSelector = "#tick-mark path";
+	const tickMarkPathElement = document.querySelector(
+		tickMarkPathSelector
+	) as SVGPathElement;
+	let pathLength = 0;
+	if (tickMarkPathElement) {
+		pathLength = tickMarkPathElement.getTotalLength();
+	}
+
+	// gsap.set("#tick-mark", { opacity: 0 });
+
+	gsap.set("#tick-mark", {
+		strokeDashoffset: pathLength,
+		strokeDasharray: pathLength,
+	});
+
+	const clickHandler = () => {
+		setChecked(true);
+		if (checked) {
+			tl2.to("#checkbox_fill", { top: "0" });
+			tl2.fromTo(
+				tickMarkPathElement,
+				{ strokeDashoffset: pathLength },
+				{ strokeDashoffset: 0 }
+			);
+		}
 	};
 
 	//revert back not focussed
@@ -332,6 +365,7 @@ export default function ReachtOut() {
 							id="checkbox"
 							type="checkbox"
 							className="absolute bottom-0 left-0 w-full h-full border-2 border-white rounded-sm opacity-0 cursor-pointer"
+							onClick={clickHandler}
 						/>
 						<svg
 							width="19"
