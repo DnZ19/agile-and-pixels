@@ -212,10 +212,14 @@ export default function ReachtOut() {
 
 	if (state.succeeded) {
 		return (
-			<p>
-				Thanks for reaching out, I will be in contact
-				shortly!
-			</p>
+			<div className="flex flex-col items-center md:items-start md:flex-row gap-16">
+				<div className="flex flex-col justify-center items-center md:items-start md:justify-normal w-[250px] md:w-[300px]">
+					<p className="text-justify w-auto md:w-80">
+						Thanks for reaching out, I will be in contact
+						shortly!
+					</p>
+				</div>
+			</div>
 		);
 	}
 
