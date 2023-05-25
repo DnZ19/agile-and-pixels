@@ -393,6 +393,7 @@ export default function ReachtOut() {
 						<input
 							id="checkbox"
 							type="checkbox"
+							name="_optin"
 							className="absolute bottom-0 left-0 w-full h-full border-2 opacity-0 cursor-pointer z-50"
 							onClick={clickHandler}
 						/>

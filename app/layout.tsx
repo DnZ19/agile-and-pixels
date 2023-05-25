@@ -34,9 +34,11 @@ export default async function RootLayout({
 					{/* Add other head tags like styles, scripts, etc. here */}
 					<link rel="icon" href="/favicon.ico" />
 				</Head>
-				<body className="bg-mainBgColor flex flex-col items-center min-h-screen">
+				<body className="bg-slate-800 flex flex-col items-center min-h-screen">
 					<Nav />
+
 					{children}
+
 					<Bottom />
 				</body>
 			</html>

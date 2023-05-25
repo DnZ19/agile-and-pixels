@@ -9,12 +9,14 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
+		"@barba/core": "^2.9.7",
 		"@formspree/react": "^2.4.1",
 		"@next-auth/prisma-adapter": "^1.0.6",
 		"@prisma/client": "^4.13.0",
 		"@types/node": "18.16.3",
 		"@types/react": "18.2.0",
 		"@types/react-dom": "18.2.1",
+		"framer-motion": "^10.12.16",
 		"gsap": "^3.11.5",
 		"next": "13.3.2",
 		"next-auth": "^4.22.1",
