@@ -73,9 +73,9 @@ export default function Nav() {
 					<p className="mt-1 text-xs md:text-lg text-tertiaryColor font-custom-font-italic lg:pl-1 lg:mb-0 lg:mt-2 lg:text-xs xl:text-lg">
 						Agile Coaching / Frontend / Fullstack
 					</p>
-					<span className="text-xs italic text-secondairyColor">
+					{/* <span className="text-xs italic text-secondairyColor">
 						(mvp version)
-					</span>
+					</span> */}
 				</div>
 			</div>
 
